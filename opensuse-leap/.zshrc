@@ -93,6 +93,61 @@ fi
 # Preferred over aliases to prevent conflicts with commands
 #
 
+# Upgrade system, clean up files, and check free space
+function fup {
+if command fup 2>/dev/null; then
+    command fup
+else
+    echo Clean\ up\ Docker\ files: \
+        && dsc.sh && docker system prune -f \
+    && echo Upgrade\ base\ conda\ environment: \
+        && cua.sh \
+        && conda update conda \
+    && echo Upgrade\ misc\ conda\ environment: \
+        && conda activate misc \
+        && cua.sh \
+        && conda update csvkit \
+        && pip install -U grip youtube_dl \
+        && conda deactivate \
+    && echo Upgrade\ dotfiles-eturkes: \
+        && cd $HOME/Documents/projects/dotfiles-eturkes/ \
+        && git pull \
+        && cd - \
+    && echo Upgrade\ tikz2pdf: \
+        && cd $HOME/Documents/apps/tikz2pdf/ \
+        && git pull \
+        && cd - \
+    && echo Upgrade\ gitignore-eturkes: \
+        && cd $HOME/Documents/apps/gitignore-eturkes/ \
+        && git pull \
+        && git fetch upstream && git merge upstream/master \
+        && cd - \
+    && echo Upgrade\ KeepToText-eturkes: \
+        && cd $HOME/Documents/apps/KeepToText-eturkes/ \
+        && git pull \
+        && git fetch upstream && git merge upstream/master \
+        && cd - \
+    && echo Upgrade\ zimfw-eturkes: \
+        && cd $HOME/.zim/ \
+        && git pull \
+        && zmanage update \
+        && git fetch upstream && git merge upstream/master \
+        && cd - \
+    && cd $HOME/Documents/apps/iso \
+        && wget -N --trust-server-names=on \
+        https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
+        && cd -\
+    && nvim +'call dein#update()' +qall \
+    && dtr.sh && sudo zypper up --details \
+    && etr.sh && sudo zypper up --details \
+    && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
+    && sudo rpmconf -a \
+    && sudo btrfs fi usage / && lff.sh \
+    && sudo zypper pa --orphaned --unneeded \
+    && sudo zypper ps
+fi
+}
+
 # ls with long listing, almost-all, and human-readable options
 function lah {
 if command lah 2>/dev/null; then
