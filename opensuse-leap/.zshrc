@@ -210,3 +210,10 @@ else
     cd $HOME/Documents/other/
 fi
 }
+
+#
+# Aliases
+# For things I want to deliberately override
+#
+
+alias vimdiff='nvim -d'

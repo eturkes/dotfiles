@@ -17,3 +17,8 @@
 	email = eturkes@bu.edu
 [core]
 	excludesfile = ~/.gitignore-global
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+[mergetool]
+	prompt = false
