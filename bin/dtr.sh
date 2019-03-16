@@ -21,8 +21,6 @@ sudo zypper mr -d libdvdcss\ repository && i=1 \
     && sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d google-chrome && i=$((i+1)) \
     && sudo zypper mr -d editors && i=$((i+1)) \
-    && sudo zypper mr -d devel:languages:R:patched && i=$((i+1)) \
     && sudo zypper mr -d Emulators:Wine && i=$((i+1)) \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
-    && sudo zypper mr -d devel:languages:R:released && i=$((i+1)) \
     && echo ${i} repos disabled
