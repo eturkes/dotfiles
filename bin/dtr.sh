@@ -24,4 +24,5 @@ sudo zypper mr -d libdvdcss\ repository && i=1 \
     && sudo zypper mr -d devel:languages:R:patched && i=$((i+1)) \
     && sudo zypper mr -d Emulators:Wine && i=$((i+1)) \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
+    && sudo zypper mr -d devel:languages:R:released && i=$((i+1)) \
     && echo ${i} repos disabled
