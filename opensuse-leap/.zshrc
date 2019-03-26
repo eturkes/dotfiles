@@ -123,7 +123,7 @@ else
         && git fetch upstream && git merge upstream/master \
         && cd - \
     && echo Upgrade\ KeepToText-eturkes: \
-        && cd $HOME/Documents/apps/KeepToText-eturkes/ \
+        && cd $HOME/Documents/projects/KeepToText-eturkes/ \
         && git pull \
         && git fetch upstream && git merge upstream/master \
         && cd - \
