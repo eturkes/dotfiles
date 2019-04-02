@@ -114,9 +114,6 @@ if command fup 2>/dev/null; then
 else
     echo Clean\ up\ Docker\ files: \
         && dsc.sh && docker system prune -f \
-    && echo Upgrade\ base\ conda\ environment: \
-        && cua.sh \
-        && conda update conda \
     && echo Upgrade\ misc\ conda\ environment: \
         && conda activate misc \
         && cua.sh \
