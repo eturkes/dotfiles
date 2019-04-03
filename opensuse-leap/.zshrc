@@ -120,8 +120,8 @@ else
     && echo Upgrade\ misc\ conda\ environment: \
         && conda activate misc \
         && cua.sh \
-        && conda update csvkit jupyter \
-        && pip install -U grip youtube_dl \
+        && conda update csvkit jupyter youtube-dl \
+        && pip install -U grip \
         && conda deactivate \
     && echo Upgrade\ dotfiles-eturkes: \
         && cd $HOME/Documents/projects/dotfiles-eturkes/ \
