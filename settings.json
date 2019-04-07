@@ -13,7 +13,7 @@
 // limitations under the License.
 
 // micro editor config
-// Place in $XDG_CONFIG_HOME/micro
+// Place in $XDG_CONFIG_HOME/micro/
 
 {
     "autoclose": true,
