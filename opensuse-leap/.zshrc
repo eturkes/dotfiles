@@ -154,6 +154,7 @@ else
     && nvim +'call dein#update()' +qall \
     && dtr.sh && sudo zypper up --details \
     && etr.sh && sudo zypper up --details \
+    && sudo zypper dup --details --from devel:languages:R:patched --allow-vendor-change \
     && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
     && sudo rpmconf -a \
     && sudo btrfs fi usage / && lff.sh \
