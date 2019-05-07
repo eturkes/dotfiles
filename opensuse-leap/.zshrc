@@ -131,6 +131,10 @@ else
         && cd $HOME/Documents/apps/tikz2pdf/ \
         && git pull \
         && cd - \
+    && echo Upgrade\ btrfs-du: \
+        && cd $HOME/Documents/apps/btrfs-du/ \
+        && git pull \
+        && cd - \
     && echo Upgrade\ gitignore-eturkes: \
         && cd $HOME/Documents/apps/gitignore-eturkes/ \
         && git pull \
