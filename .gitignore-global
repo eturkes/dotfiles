@@ -60,6 +60,7 @@ secring.*
 
 # Session
 Session.vim
+Sessionx.vim
 
 # Temporary
 .netrwhist
