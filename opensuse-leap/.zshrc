@@ -135,6 +135,10 @@ else
         && cd $HOME/Documents/apps/btrfs-du/ \
         && git pull \
         && cd - \
+    && echo Upgrade\ scNetViz: \
+        && cd $HOME/Documents/apps/scNetViz/ \
+        && git pull \
+        && cd - \
     && echo Upgrade\ gitignore-eturkes: \
         && cd $HOME/Documents/apps/gitignore-eturkes/ \
         && git pull \
