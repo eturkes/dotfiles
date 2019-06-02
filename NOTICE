@@ -7,11 +7,8 @@ This project includes content from the following:
 st https://st.suckless.org/
 Jupyter Notebook https://github.com/jupyter/notebook
 Zim https://github.com/zimfw/zimfw
-sensible.vim https://github.com/tpope/vim-sensible
-Vundle https://github.com/VundleVim/Vundle.vim
 dein https://github.com/Shougo/dein.vim
 Oh My Zsh https://github.com/robbyrussell/oh-my-zsh
-Vim Bootstrap https://github.com/avelino/vim-bootstrap
 
 Respective copyright notices below:
 
@@ -90,30 +87,6 @@ OTHER DEALINGS IN THE SOFTWARE.
 
 ########################################################################################
 
-# sensible.vim https://github.com/tpope/vim-sensible
-
-# No explicit license, however the author (tpope) addressed copyright in a Github issue:
-https://github.com/tpope/vim-sensible/issues/106
-Retrieved: 2018.01.20 UTC
-
-# The author's comment:
-"I don't think it wise to change the license on a whim, but you have my explicit 
-permission to copy as much or as little from sensible.vim as you like."
-
-########################################################################################
-
-# Vundle https://github.com/VundleVim/Vundle.vim 
-
-Copyright (C) 2010 http://github.com/gmarik
-
-Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-########################################################################################
-
 # dein https://github.com/Shougo/dein.vim
 
 License: MIT license
@@ -146,32 +119,6 @@ The MIT License (MIT)
 
 Copyright (c) 2009-2018 Robby Russell and contributors
 See the full list at https://github.com/robbyrussell/oh-my-zsh/contributors
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
-########################################################################################
-
-# Vim Bootstrap https://github.com/avelino/vim-bootstrap
-
-The MIT License (MIT)
-
-Copyright (c) 2014 Thiago Avelino
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
