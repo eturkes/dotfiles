@@ -17,7 +17,8 @@
 # Enable all third-party repos
 
 sudo zypper mr -e libdvdcss\ repository && i=1 \
-    && sudo zypper mr -e home:megamaced:spotify-easyrpm && i=$((i+1)) \
+    && sudo zypper mr -e multimedia:libs && i=$((i+1)) \
+    && sudo zypper mr -e multimedia:apps && i=$((i+1)) \
     && sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e google-chrome && i=$((i+1)) \
     && sudo zypper mr -e devel:languages:R:patched && i=$((i+1)) \
