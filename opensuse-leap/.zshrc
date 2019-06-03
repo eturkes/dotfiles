@@ -142,6 +142,10 @@ else
         && cd $HOME/Documents/apps/scNetViz/ \
         && git pull \
         && cd - \
+    && echo Upgrade\ wl-clipboard: \
+        && cd $HOME/Documents/apps/wl-clipboard/ \
+        && git pull \
+        && cd - \
     && echo Upgrade\ gitignore-eturkes: \
         && cd $HOME/Documents/apps/gitignore-eturkes/ \
         && git pull \
