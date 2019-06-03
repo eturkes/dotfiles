@@ -123,7 +123,7 @@ else
     && echo Upgrade\ misc\ conda\ environment: \
         && conda activate misc \
         && cua.sh \
-        && conda update csvkit jupyter youtube-dl \
+        && conda update youtube-dl \
         && pip install -U grip \
         && conda deactivate \
     && echo Upgrade\ dotfiles-eturkes: \
