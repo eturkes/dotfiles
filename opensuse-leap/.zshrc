@@ -100,6 +100,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Use Java 8 for compatibility with Cytoscape
+export JAVA_HOME=/usr/lib64/jvm/jre-1.8.0-openjdk
+
 #
 # Functions
 # Preferred over aliases to prevent conflicts with commands
