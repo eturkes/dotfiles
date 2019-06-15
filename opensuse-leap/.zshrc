@@ -146,6 +146,10 @@ else
         && cd $HOME/Documents/apps/wl-clipboard/ \
         && git pull \
         && cd - \
+    && echo Upgrade\ systemd-swap: \
+        && cd $HOME/Documents/apps/systemd-swap/ \
+        && git pull \
+        && cd - \
     && echo Upgrade\ gitignore-eturkes: \
         && cd $HOME/Documents/apps/gitignore-eturkes/ \
         && git pull \
