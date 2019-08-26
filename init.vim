@@ -93,3 +93,7 @@ let g:airline_theme='simple'
 set updatetime=100
 let g:gitgutter_override_sign_column_highlight = 0
 hi SignColumn ctermbg=None
+
+" Readable highlighting
+" Must be added at the end to work correctly
+hi Visual cterm=reverse ctermbg=NONE
