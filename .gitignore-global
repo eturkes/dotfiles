@@ -84,12 +84,15 @@ Sessionx.vim
 *.rar
 *.zip
 *.gz
+*.gzip
 *.tgz
 *.bzip
+*.bzip2
 *.bz2
 *.xz
 *.lzma
 *.cab
+*.xar
 
 # Packing-only formats
 *.iso
@@ -105,6 +108,7 @@ Sessionx.vim
 *.msi
 *.msm
 *.msp
+*.txz
 
 #
 # From Global/JetBrains.gitignore in
