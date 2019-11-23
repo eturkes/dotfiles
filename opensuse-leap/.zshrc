@@ -55,7 +55,8 @@ if command fup 2>/dev/null; then
     command fup
 else
     echo Clean\ up\ Docker\ files: \
-        && dsc.sh && docker system prune -f \
+        && dsc.sh \
+        && docker system prune -f \
     && echo Upgrade\ base\ conda\ environment: \
         && conda activate base \
         && cua.sh \
@@ -122,7 +123,8 @@ else
     && etr.sh && sudo zypper up --details \
     && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
     && sudo rpmconf -a \
-    && sudo btrfs fi usage / && lff.sh \
+    && sudo btrfs fi usage / \
+    && lff.sh \
     && sudo zypper pa --orphaned --unneeded \
     && sudo zypper ps
 fi
