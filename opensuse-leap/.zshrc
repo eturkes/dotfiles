@@ -124,7 +124,6 @@ else
     && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
     && sudo rpmconf -a \
     && sudo btrfs fi usage / \
-    && lff.sh \
     && sudo zypper pa --orphaned --unneeded \
     && sudo zypper ps
 fi

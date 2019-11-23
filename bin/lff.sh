@@ -16,5 +16,8 @@
 
 # List most fragmented files in home directory
 
+# TODO: Fix error:
+# find: ‘filefrag’ terminated by signal 13
+
 sudo find $HOME -type f -exec filefrag {} + | awk '{print $(NF-2),$0}' | sort -rn \
     | cut -f2- -d ' ' | head
