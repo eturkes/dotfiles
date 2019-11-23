@@ -98,18 +98,20 @@ else
     && echo Upgrade\ gitignore-eturkes: \
         && cd $HOME/Documents/apps/gitignore-eturkes/ \
         && git pull \
-        && git fetch upstream && git merge upstream/master \
+        && git fetch upstream \
+        && git merge upstream/master \
         && cd - \
     && echo Upgrade\ KeepToText-eturkes: \
         && cd $HOME/Documents/projects/KeepToText-eturkes/ \
         && git pull \
-        && git fetch upstream && git merge upstream/master \
+        && git fetch upstream \
+        && git merge upstream/master \
         && cd - \
     && echo Upgrade\ zimfw-eturkes: \
         && cd $HOME/.zim/ \
         && git pull \
         && zmanage update \
-        && git fetch upstream && git merge upstream/master \
+        && git merge upstream/master \
         && cd - \
     && cd $HOME/Documents/apps/iso \
         && wget -N --trust-server-names=on \

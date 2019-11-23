@@ -70,7 +70,7 @@ else
         && cd $HOME/.zim/ \
         && git pull \
         && zmanage update \
-        && git fetch upstream && git merge upstream/master \
+        && git merge upstream/master \
         && cd - \
     && vim +PluginInstall! +qall \
     && aus
