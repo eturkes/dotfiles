@@ -1,2 +1,5 @@
 # Things that should not be tracked by Git, so are instead stored in Google Drive
 /gdrive/
+
+# Workaround for programs that install themselves to symlinked bin directory
+pycharm
