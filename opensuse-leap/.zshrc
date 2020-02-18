@@ -108,12 +108,6 @@ else
         && git fetch upstream \
         && git merge upstream/master \
         && cd - \
-    && echo Upgrade\ zimfw-eturkes: \
-        && cd $HOME/.zim/ \
-        && git pull \
-        && zmanage update \
-        && git merge upstream/master \
-        && cd - \
     && cd $HOME/Documents/apps/iso \
         && wget -N --trust-server-names=on \
         https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
