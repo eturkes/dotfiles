@@ -244,24 +244,6 @@ else
 fi
 }
 
-# ls with long listing, almost-all, and human-readable options
-function lah {
-if command lah 2>/dev/null; then
-    command lah
-else
-    ls -lAh
-fi
-}
-
-# ls with almost-all option
-function lal {
-if command lal 2>/dev/null; then
-    command lal
-else
-    ls -A
-fi
-}
-
 # cd to Downloads directory
 function dow {
 if command dow 2>/dev/null; then
@@ -312,4 +294,15 @@ fi
 # For things I want to deliberately override
 #
 
+# Use correct program in Git.
 alias vimdiff='nvim -d'
+
+# ---------------------------------------------------------------------------------------
+# TODO: Integrate with Zim's new syntax highlighting and move below aliases to functions.
+
+# ls with long listing, almost-all, and human-readable options.
+alias lah='ls -lAh'
+
+# ls with almost-all option.
+alias lal='ls -A'
+# ---------------------------------------------------------------------------------------
