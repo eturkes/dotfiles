@@ -186,8 +186,8 @@ else
         && conda update youtube-dl \
         && pip install -U grip \
         && conda deactivate \
-    && echo Upgrade\ dotfiles-eturkes: \
-        && cd $HOME/Documents/projects/dotfiles-eturkes/ \
+    && echo Upgrade\ dotfiles: \
+        && cd $HOME/Documents/projects/dotfiles/ \
         && git pull \
         && cd - \
     && echo Upgrade\ tikz2pdf: \
