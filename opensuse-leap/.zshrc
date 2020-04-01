@@ -214,14 +214,14 @@ else
         && cd $HOME/Documents/apps/terminology-themes/ \
         && git pull \
         && cd - \
-    && echo Upgrade\ gitignore-eturkes: \
-        && cd $HOME/Documents/apps/gitignore-eturkes/ \
+    && echo Upgrade\ gitignore: \
+        && cd $HOME/Documents/apps/gitignore/ \
         && git pull \
         && git fetch upstream \
         && git merge upstream/master \
         && cd - \
-    && echo Upgrade\ KeepToText-eturkes: \
-        && cd $HOME/Documents/projects/KeepToText-eturkes/ \
+    && echo Upgrade\ KeepToText: \
+        && cd $HOME/Documents/projects/KeepToText/ \
         && git pull \
         && git fetch upstream \
         && git merge upstream/master \
