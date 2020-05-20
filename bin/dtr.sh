@@ -24,4 +24,5 @@ sudo zypper mr -d libdvdcss\ repository && i=1 \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
     && sudo zypper mr -d network:im:signal && i=$((i+1)) \
     && sudo zypper mr -d devel:languages:R:released && i=$((i+1)) \
+    && sudo zypper mr -d teams && i=$((i+1)) \
     && echo ${i} repos disabled
