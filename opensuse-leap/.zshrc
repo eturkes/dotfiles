@@ -190,24 +190,8 @@ else
         && cd $HOME/Documents/projects/dotfiles/ \
         && git pull \
         && cd - \
-    && echo Upgrade\ tikz2pdf: \
-        && cd $HOME/Documents/apps/tikz2pdf/ \
-        && git pull \
-        && cd - \
     && echo Upgrade\ btrfs-du: \
         && cd $HOME/Documents/apps/btrfs-du/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ scNetViz: \
-        && cd $HOME/Documents/apps/scNetViz/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ wl-clipboard: \
-        && cd $HOME/Documents/apps/wl-clipboard/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ systemd-swap: \
-        && cd $HOME/Documents/apps/systemd-swap/ \
         && git pull \
         && cd - \
     && echo Upgrade\ terminology-themes: \
@@ -216,12 +200,6 @@ else
         && cd - \
     && echo Upgrade\ gitignore: \
         && cd $HOME/Documents/apps/gitignore/ \
-        && git pull \
-        && git fetch upstream \
-        && git merge upstream/master \
-        && cd - \
-    && echo Upgrade\ KeepToText: \
-        && cd $HOME/Documents/projects/KeepToText/ \
         && git pull \
         && git fetch upstream \
         && git merge upstream/master \
