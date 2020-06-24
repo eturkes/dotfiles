@@ -183,7 +183,7 @@ else
     && echo Upgrade\ misc\ conda\ environment: \
         && conda activate misc \
         && cua.sh \
-        && conda update youtube-dl \
+        && conda update youtube-dl jupyterlab ipyparallel \
         && pip install -U grip \
         && conda deactivate \
     && echo Upgrade\ dotfiles: \
