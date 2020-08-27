@@ -15,11 +15,12 @@
 # Settings for blue borders on active window with Breeze theme
 
 [WM]
+FakeEntryToKeepThisGroup=true
 activeBackground=71,80,87
-activeBlend=255,255,255
-activeForeground=239,240,241
-frame=61,174,233
-inactiveBackground=239,240,241
-inactiveBlend=75,71,67
-inactiveForeground=189,195,199
-inactiveFrame=239,240,241
+activeBlend=252,252,252
+activeForeground=252,252,252
+frame=71,80,87
+inactiveBackground=198,200,201
+inactiveBlend=71,80,87
+inactiveForeground=71,80,87
+inactiveFrame=198,200,201
