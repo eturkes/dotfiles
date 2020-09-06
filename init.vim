@@ -60,15 +60,13 @@ if dein#load_state('~/.cache/dein')
   " Required:
   call dein#add('~/.cache/dein/repos/github.com/Shougo/dein.vim')
 
-  " Add or remove your plugins here:
+  " Add or remove your plugins here like this:
   call dein#add('vim-airline/vim-airline')
   call dein#add('vim-airline/vim-airline-themes')
   call dein#add('ConradIrwin/vim-bracketed-paste')
   call dein#add('ajh17/VimCompletesMe')
   call dein#add('sheerun/vim-polyglot')
   call dein#add('airblade/vim-gitgutter')
-
-  " You can specify revision/branch/tag.
 
   " Required:
   call dein#end()
