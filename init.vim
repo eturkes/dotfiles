@@ -34,7 +34,7 @@ set titlestring=%t
 " Set hybrid line numbers
 set nu rnu
 au colorscheme * hi LineNr ctermbg=Blue ctermfg=Black
-au colorscheme * hi CursorLineNr ctermbg=None ctermfg=Black
+au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
 
 " Yank to clipboard
 if has('unnamedplus')
