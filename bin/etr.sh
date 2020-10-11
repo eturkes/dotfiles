@@ -29,4 +29,5 @@ sudo zypper mr -e libdvdcss\ repository && i=1 \
     && sudo zypper mr -e network:im:signal && i=$((i+1)) \
     && sudo zypper mr -e devel:languages:R:released && i=$((i+1)) \
     && sudo zypper mr -e teams && i=$((i+1)) \
+    && sudo zypper mr -e devel:languages:ocaml && i=$((i+1)) \
     && echo ${i} repos enabled
