@@ -20,14 +20,8 @@
 
 # Enable all third-party repos
 
-sudo zypper mr -e libdvdcss\ repository && i=1 \
-    && sudo zypper mr -e multimedia:libs && i=$((i+1)) \
-    && sudo zypper mr -e multimedia:apps && i=$((i+1)) \
-    && sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
+sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e google-chrome && i=$((i+1)) \
     && sudo zypper mr -e skype-stable && i=$((i+1)) \
-    && sudo zypper mr -e network:im:signal && i=$((i+1)) \
-    && sudo zypper mr -e devel:languages:R:released && i=$((i+1)) \
     && sudo zypper mr -e teams && i=$((i+1)) \
-    && sudo zypper mr -e devel:languages:ocaml && i=$((i+1)) \
     && echo ${i} repos enabled

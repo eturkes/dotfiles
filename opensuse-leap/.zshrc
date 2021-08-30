@@ -185,27 +185,8 @@ else
     echo Clean\ up\ Docker\ files: \
         && dsc.sh \
         && docker system prune -f \
-    && echo Upgrade\ base\ conda\ environment: \
-        && conda activate base \
-        && cua.sh \
-        && conda update conda \
-        && conda deactivate \
-    && echo Upgrade\ misc\ conda\ environment: \
-        && conda activate misc \
-        && cua.sh \
-        && conda update youtube-dl jupyterlab ipyparallel \
-        && pip install -U grip \
-        && conda deactivate \
     && echo Upgrade\ dotfiles: \
         && cd $HOME/Documents/projects/dotfiles/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ btrfs-du: \
-        && cd $HOME/Documents/apps/btrfs-du/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ terminology-themes: \
-        && cd $HOME/Documents/apps/terminology-themes/ \
         && git pull \
         && cd - \
     && echo Upgrade\ gitignore: \
@@ -224,7 +205,7 @@ else
     && nvim +'call dein#update()' +qall \
     && dtr.sh && sudo zypper up --details \
     && etr.sh && sudo zypper up --details \
-    && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
+    && sudo zypper dup --details --from packman --allow-vendor-change \
     && sudo rpmconf -a \
     && sudo btrfs fi usage / \
     && sudo zypper pa --orphaned --unneeded \

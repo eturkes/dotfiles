@@ -20,14 +20,8 @@
 
 # Disable all third-party repos
     
-sudo zypper mr -d libdvdcss\ repository && i=1 \
-    && sudo zypper mr -d multimedia:libs && i=$((i+1)) \
-    && sudo zypper mr -d multimedia:apps && i=$((i+1)) \
-    && sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
+sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d google-chrome && i=$((i+1)) \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
-    && sudo zypper mr -d network:im:signal && i=$((i+1)) \
-    && sudo zypper mr -d devel:languages:R:released && i=$((i+1)) \
     && sudo zypper mr -d teams && i=$((i+1)) \
-    && sudo zypper mr -d devel:languages:ocaml && i=$((i+1)) \
     && echo ${i} repos disabled
