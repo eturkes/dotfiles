@@ -35,9 +35,12 @@ zmodule utility
 #
 # Prompt
 #
-# Exposes git repository status information to prompts.
+# Exposes to prompts how long the last command took to execute, used by asciiship.
+zmodule duration-info
+# Exposes git repository status information to prompts, used by asciiship.
 zmodule git-info
-# A customizable version of steeef's prompt theme.
+# A heavily reduced, ASCII-only version of the Spaceship and Starship prompts.
+zmodule prompt-pwd
 zmodule magicmace
 
 # Additional completion definitions for Zsh.
