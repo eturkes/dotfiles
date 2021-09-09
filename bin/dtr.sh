@@ -24,4 +24,5 @@ sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d google-chrome && i=$((i+1)) \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
     && sudo zypper mr -d teams && i=$((i+1)) \
+    && sudo zypper mr -d Education && i=$((i+1)) \
     && echo ${i} repos disabled
