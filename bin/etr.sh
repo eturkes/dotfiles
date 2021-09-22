@@ -25,4 +25,6 @@ sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e skype-stable && i=$((i+1)) \
     && sudo zypper mr -e teams && i=$((i+1)) \
     && sudo zypper mr -e Education && i=$((i+1)) \
+    && sudo zypper mr -e devel:languages:rust && i=$((i+1)) \
+    && sudo zypper mr -e network:im:signal && i=$((i+1)) \
     && echo ${i} repos enabled
