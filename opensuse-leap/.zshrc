@@ -185,6 +185,16 @@ else
     echo Clean\ up\ Docker\ files: \
         && dsc.sh \
         && docker system prune -f \
+    && echo Upgrade\ base\ conda\ environment: \
+        && conda activate base \
+        && cua.sh \
+        && conda update conda \
+        && conda deactivate \
+    && echo Upgrade\ misc\ conda\ environment: \
+        && conda activate misc \
+        && cua.sh \
+        && pip install -U vpn-porthole \
+        && conda deactivate \
     && echo Upgrade\ dotfiles: \
         && cd $HOME/Documents/projects/dotfiles/ \
         && git pull \
