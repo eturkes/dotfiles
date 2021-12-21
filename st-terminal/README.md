@@ -1,6 +1,6 @@
 <!---
    This file is part of dotfiles.
-   Copyright (C) 2020  Emir Turkes
+   Copyright (C) 2020-2021  Emir Turkes
 
    This program is free software: you can redistribute it and/or modify
    it under the terms of the GNU General Public License as published by
