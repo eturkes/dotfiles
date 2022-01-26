@@ -193,7 +193,6 @@ else
     && echo Upgrade\ misc\ conda\ environment: \
         && conda activate misc \
         && cua.sh \
-        && pip install -U vpn-porthole \
         && conda deactivate \
     && echo Upgrade\ dotfiles: \
         && cd $HOME/Documents/projects/dotfiles/ \
