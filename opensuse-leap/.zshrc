@@ -238,11 +238,11 @@ alias ref='cd $HOME/Documents/reference/'
 # cd to apps directory
 alias app='cd $HOME/Documents/apps/'
 
-# Use correct program in Git.
+# Use correct program in Git
 alias vimdiff='nvim -d'
 
-# ls with long listing, almost-all, and human-readable options.
+# ls with long listing, almost-all, and human-readable options
 alias lah='ls -lAh'
 
-# ls with almost-all option.
+# ls with almost-all option
 alias lal='ls -A'
