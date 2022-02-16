@@ -222,65 +222,27 @@ else
 fi
 }
 
-# cd to Downloads directory
-function dow {
-if command dow 2>/dev/null; then
-    command dow
-else
-    cd $HOME/Downloads/
-fi
-}
-
-# cd to projects directory
-function pro {
-if command pro 2>/dev/null; then
-    command pro
-else
-    cd $HOME/Documents/projects/
-fi
-}
-
-# cd to reference directory
-function ref {
-if command ref 2>/dev/null; then
-    command ref
-else
-    cd $HOME/Documents/reference/
-fi
-}
-
-# cd to apps directory
-function app {
-if command app 2>/dev/null; then
-    command app
-else
-    cd $HOME/Documents/apps/
-fi
-}
-
-# cd to other directory
-function oth {
-if command oth 2>/dev/null; then
-    command oth
-else
-    cd $HOME/Documents/other/
-fi
-}
-
 #
 # Aliases
-# For things I want to deliberately override
 #
+
+# cd to Downloads directory
+alias dow='cd $HOME/Downloads/'
+
+# cd to projects directory
+alias pro='cd $HOME/Documents/projects/'
+
+# cd to reference directory
+alias ref='cd $HOME/Documents/reference/'
+
+# cd to apps directory
+alias app='cd $HOME/Documents/apps/'
 
 # Use correct program in Git.
 alias vimdiff='nvim -d'
-
-# ---------------------------------------------------------------------------------------
-# TODO: Integrate with Zim's new syntax highlighting and move below aliases to functions.
 
 # ls with long listing, almost-all, and human-readable options.
 alias lah='ls -lAh'
 
 # ls with almost-all option.
 alias lal='ls -A'
-# ---------------------------------------------------------------------------------------
