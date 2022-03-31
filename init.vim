@@ -21,6 +21,11 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 
+" Set hybrid line numbers
+set nu rnu
+au colorscheme * hi LineNr ctermbg=Blue ctermfg=Black
+au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
+
 " Syntax highlighting colors
 colorscheme peachpuff
 au colorscheme * hi MatchParen ctermbg=White ctermfg=Black
@@ -30,11 +35,6 @@ set nohlsearch
 set title
 set titleold="Terminal"
 set titlestring=%t
-
-" Set hybrid line numbers
-set nu rnu
-au colorscheme * hi LineNr ctermbg=Blue ctermfg=Black
-au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
 
 " Yank to clipboard
 if has('unnamedplus')
