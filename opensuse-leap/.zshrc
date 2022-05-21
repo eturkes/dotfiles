@@ -172,6 +172,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add user npm packages to path
+export PATH=~/.npm-global/bin:$PATH
+
 #
 # Functions
 # Preferred over aliases to prevent conflicts with commands
