@@ -175,6 +175,9 @@ unset __conda_setup
 # Add user npm packages to path
 export PATH=~/.npm-global/bin:$PATH
 
+# Add Foundry to path
+export PATH="$PATH:/home/eturkes/.foundry/bin"
+
 #
 # Functions
 # Preferred over aliases to prevent conflicts with commands
