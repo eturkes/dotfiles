@@ -200,8 +200,9 @@ else
         && conda activate misc \
         && cua.sh \
         && conda deactivate \
-    && echo Upgrade npm: \
+    && echo Upgrade npm and global packages: \
         && npm install -g npm@latest \
+        && npm update -g \
     && echo Upgrade\ dotfiles: \
         && cd $HOME/Documents/projects/dotfiles/ \
         && git pull \
