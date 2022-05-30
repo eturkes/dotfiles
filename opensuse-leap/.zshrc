@@ -201,8 +201,8 @@ else
         && cua.sh \
         && conda deactivate \
     && echo Upgrade npm and global packages: \
-        && npm install -g npm@latest \
-        && npm update -g \
+        && npm install --location=global npm@latest \
+        && npm update --location-global \
     && echo Upgrade\ dotfiles: \
         && cd $HOME/Documents/projects/dotfiles/ \
         && git pull \
