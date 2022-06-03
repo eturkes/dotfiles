@@ -255,3 +255,6 @@ alias lah='ls -lAh'
 
 # ls with almost-all option
 alias lal='ls -A'
+
+# Shortcut to xdg-open
+alias open='xdg-open'
