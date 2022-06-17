@@ -253,6 +253,9 @@ alias vimdiff='nvim -d'
 # ls with long listing, almost-all, and human-readable options
 alias lah='ls -lAh'
 
+# ls with long listing, almost-all, human-readable, and sorted by time options
+alias lap='ls -lAhtr'
+
 # ls with almost-all option
 alias lal='ls -A'
 
