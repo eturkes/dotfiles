@@ -199,10 +199,6 @@ else
         && cua.sh \
         && conda update conda \
         && conda deactivate \
-    && echo Upgrade\ misc\ conda\ environment: \
-        && conda activate misc \
-        && cua.sh \
-        && conda deactivate \
     && echo Upgrade npm and global packages: \
         && npm install --location=global npm@latest \
         && npm update --location-global \
