@@ -178,6 +178,9 @@ export PATH=~/.npm-global/bin:$PATH
 # Add Foundry to path
 export PATH="$PATH:/home/eturkes/.foundry/bin"
 
+# Keep bin from dotfiles repo in separate symlink
+export PATH="$PATH:/home/eturkes/bin-dotfiles"
+
 #
 # Functions
 # Preferred over aliases to prevent conflicts with commands
