@@ -146,7 +146,7 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
-PS1='%F{${COLOR_USER}}[%F{${COLOR_NORMAL}}%D{%T}%F{${COLOR_USER}}]─$(_prompt_magicmace_main)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${COLOR_USER}}]${(e)git_info[prompt]}─>%f '
+PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
 
 zstyle ':zim' disable-version-check yes
 
