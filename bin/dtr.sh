@@ -24,10 +24,10 @@ sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d google-chrome && i=$((i+1)) \
     && sudo zypper mr -d skype-stable && i=$((i+1)) \
     && sudo zypper mr -d teams && i=$((i+1)) \
-    && sudo zypper mr -d Education && i=$((i+1)) \
     && sudo zypper mr -d devel:languages:rust && i=$((i+1)) \
     && sudo zypper mr -d network:im:signal && i=$((i+1)) \
     && sudo zypper mr -d vscode && i=$((i+1)) \
     && sudo zypper mr -d home:sor593 && i=$((i+1)) \
     && sudo zypper mr -d nordvpn && i=$((i+1)) \
+    && sudo zypper mr -d dvd && i=$((i+1)) \
     && echo ${i} repos disabled
