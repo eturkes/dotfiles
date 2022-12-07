@@ -209,8 +209,6 @@ else
     && echo Upgrade\ gitignore: \
         && cd $HOME/Documents/apps/gitignore/ \
         && git pull \
-        && git fetch upstream \
-        && git merge upstream/master \
         && cd - \
     && echo Upgrade\ zimfw: \
         && zimfw update \
