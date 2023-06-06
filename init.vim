@@ -93,7 +93,7 @@ let g:airline_theme='simple'
 
 " vim-gitgutter settings
 set updatetime=100
-let g:gitgutter_override_sign_column_highlight = 0
+let g:gitgutter_override_sign_column_highlight=0
 hi SignColumn ctermbg=None
 
 " Readable highlighting
