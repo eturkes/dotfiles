@@ -30,4 +30,6 @@ sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e home:sor593 && i=$((i+1)) \
     && sudo zypper mr -e nordvpn && i=$((i+1)) \
     && sudo zypper mr -e dvd && i=$((i+1)) \
+    && sudo zypper mr -e games && i=$((i+1)) \
+    && sudo zypper mr -e games:tools && i=$((i+1)) \
     && echo ${i} repos enabled
