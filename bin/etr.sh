@@ -32,4 +32,5 @@ sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e dvd && i=$((i+1)) \
     && sudo zypper mr -e games && i=$((i+1)) \
     && sudo zypper mr -e games:tools && i=$((i+1)) \
+    && sudo zypper mr -e filesystems && i=$((i+1)) \
     && echo ${i} repos enabled
