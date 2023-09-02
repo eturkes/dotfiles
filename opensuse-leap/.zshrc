@@ -186,6 +186,9 @@ export PATH="$PATH:/home/eturkes/.foundry/bin"
 # Keep bin from dotfiles repo in separate symlink
 export PATH="$PATH:/home/eturkes/bin-dotfiles"
 
+# Stop Ksshaskpass from popping up when using Git
+unset SSH_ASKPASS
+
 #
 # Functions
 # Preferred over aliases to prevent conflicts with commands
