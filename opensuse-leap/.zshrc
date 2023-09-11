@@ -191,49 +191,48 @@ unset SSH_ASKPASS
 
 #
 # Functions
-# Preferred over aliases to prevent conflicts with commands
 #
 
 # Upgrade system, clean up files, and check free space
 function fup {
-if command fup 2>/dev/null; then
-    command fup
-else
-    echo Clean\ up\ Docker\ files: \
-        && dsc.sh \
-        && docker system prune -f \
-    && echo Upgrade\ base\ conda\ environment: \
-        && conda activate base \
-        && cua.sh \
-        && conda update conda \
-        && conda deactivate \
-    && echo Upgrade npm and global packages: \
-        && npm install --location=global npm@latest \
-        && npm update --location-global \
-    && echo Upgrade\ dotfiles: \
-        && cd $HOME/Documents/projects/dotfiles/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ gitignore: \
-        && cd $HOME/Documents/apps/gitignore/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ zimfw: \
-        && zimfw update \
-        && zimfw upgrade \
-    && cd $HOME/Documents/apps/iso \
-        && wget -N --trust-server-names=on \
-        https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
-        && cd -\
-    && nvim +'call dein#update()' +qall \
-    && dtr.sh && sudo zypper up --details \
-    && etr.sh && sudo zypper up --details \
-    && sudo zypper dup --details --from packman --allow-vendor-change \
-    && sudo rpmconf -a \
-    && sudo btrfs fi usage / \
-    && sudo zypper pa --orphaned --unneeded \
-    && sudo zypper ps
-fi
+    if command fup 2>/dev/null; then
+        command fup
+    else
+        echo Clean\ up\ Docker\ files: \
+            && dsc.sh \
+            && docker system prune -f \
+        && echo Upgrade\ base\ conda\ environment: \
+            && conda activate base \
+            && cua.sh \
+            && conda update conda \
+            && conda deactivate \
+        && echo Upgrade npm and global packages: \
+            && npm install --location=global npm@latest \
+            && npm update --location-global \
+        && echo Upgrade\ dotfiles: \
+            && cd $HOME/Documents/projects/dotfiles/ \
+            && git pull \
+            && cd - \
+        && echo Upgrade\ gitignore: \
+            && cd $HOME/Documents/apps/gitignore/ \
+            && git pull \
+            && cd - \
+        && echo Upgrade\ zimfw: \
+            && zimfw update \
+            && zimfw upgrade \
+        && cd $HOME/Documents/apps/iso \
+            && wget -N --trust-server-names=on \
+            https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
+            && cd -\
+        && nvim +'call dein#update()' +qall \
+        && dtr.sh && sudo zypper up --details \
+        && etr.sh && sudo zypper up --details \
+        && sudo zypper dup --details --from packman --allow-vendor-change \
+        && sudo rpmconf -a \
+        && sudo btrfs fi usage / \
+        && sudo zypper pa --orphaned --unneeded \
+        && sudo zypper ps
+    fi
 }
 
 #
