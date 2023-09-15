@@ -227,7 +227,7 @@ function fup {
         && nvim +'call dein#update()' +qall \
         && dtr.sh && sudo zypper up --details \
         && etr.sh && sudo zypper up --details \
-        && sudo zypper dup --details --from packman --allow-vendor-change \
+        && sudo zypper dup --details --from packman-essentials --allow-vendor-change \
         && sudo rpmconf -a \
         && sudo btrfs fi usage / \
         && sudo zypper pa --orphaned --unneeded \
