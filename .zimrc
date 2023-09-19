@@ -17,9 +17,14 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 # Start configuration added by Zim install {{{
-# -------
+#
+# This is not sourced during shell startup, and it's only used to configure the
+# zimfw plugin manager.
+#
+
+#
 # Modules
-# -------
+#
 
 # Sets sane Zsh built-in environment options.
 zmodule environment
@@ -41,11 +46,20 @@ zmodule git-info
 zmodule prompt-pwd
 zmodule magicmace
 
+#
+# Completion
+#
+
 # Additional completion definitions for Zsh.
-zmodule zsh-users/zsh-completions
+zmodule zsh-users/zsh-completions --fpath src
 # Enables and configures smart and extensive tab completion.
-# completion must be sourced after zsh-users/zsh-completions
+# completion must be sourced after all modules that add completion definitions.
 zmodule completion
+
+#
+# Modules that must be initialized last
+#
+
 # Fish-like syntax highlighting for Zsh.
 # zsh-users/zsh-syntax-highlighting must be sourced after completion
 zmodule zsh-users/zsh-syntax-highlighting
@@ -53,4 +67,3 @@ zmodule zsh-users/zsh-syntax-highlighting
 # zsh-users/zsh-history-substring-search must be sourced after zsh-users/zsh-syntax-highlighting
 zmodule zsh-users/zsh-history-substring-search
 # }}} End configuration added by Zim install
-
