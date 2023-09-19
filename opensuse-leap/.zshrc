@@ -265,3 +265,6 @@ alias lal='ls -A'
 
 # Shortcut to xdg-open
 alias open='xdg-open'
+
+# diff with color
+alias diff='diff --color=auto'
