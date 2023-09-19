@@ -48,6 +48,12 @@ bindkey -e
 # Remove path separator from WORDCHARS.
 WORDCHARS=${WORDCHARS//[\/]}
 
+# -----------------
+# Zim configuration
+# -----------------
+
+# Use degit instead of git as the default tool to install and update modules.
+#zstyle ':zim:zmodule' use 'degit'
 
 # --------------------
 # Module configuration
@@ -90,7 +96,7 @@ zstyle ':zim:termtitle' format '%1~'
 
 # Customize the style that the suggestions are shown with.
 # See https://github.com/zsh-users/zsh-autosuggestions/blob/master/README.md#suggestion-highlight-style
-#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=10'
+#ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=242'
 
 #
 # zsh-syntax-highlighting
@@ -103,14 +109,14 @@ ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 # Customize the main highlighter styles.
 # See https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/docs/highlighters/main.md#how-to-tweak-it
 #typeset -A ZSH_HIGHLIGHT_STYLES
-#ZSH_HIGHLIGHT_STYLES[comment]='fg=10'
+#ZSH_HIGHLIGHT_STYLES[comment]='fg=242'
 
 # ------------------
 # Initialize modules
 # ------------------
 
-if [[ ${ZIM_HOME}/init.zsh -ot ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
-  # Update static initialization script if it's outdated, before sourcing it
+if [[ ! ${ZIM_HOME}/init.zsh -nt ${ZDOTDIR:-${HOME}}/.zimrc ]]; then
+  # Update static initialization script if it does not exist or it's outdated, before sourcing it
   source ${ZIM_HOME}/zimfw.zsh init -q
 fi
 source ${ZIM_HOME}/init.zsh
@@ -140,151 +146,32 @@ bindkey -M vicmd 'k' history-substring-search-up
 bindkey -M vicmd 'j' history-substring-search-down
 # }}} End configuration added by Zim install
 
-PS1='%F{${COLOR_USER}}[%F{${COLOR_NORMAL}}%n@%m%F{${COLOR_USER}}]─%F{${COLOR_USER}}[%F{${COLOR_NORMAL}}%D{%T}%F{${COLOR_USER}}]─$(_prompt_magicmace_main)${(e)git_info[prompt]}─>%f '
+PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
 
 zstyle ':zim' disable-version-check yes
 
 # From $HOME/.bashrc
-export EDITOR=/usr/bin/vim
+export EDITOR=/usr/bin/nvim
 test -s $HOME/.alias && . $HOME/.alias || true
 
 # Choose man page automatically when there are multiple
 export set MAN_POSIXLY_CORRECT=1
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/eturkes/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/eturkes/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/eturkes/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/eturkes/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-#
-# Functions
-# Preferred over aliases to prevent conflicts with commands
-#
-
-# Upgrade system, clean up files, and check free space
-function fup {
-if command fup 2>/dev/null; then
-    command fup
-else
-    echo Clean\ up\ Docker\ files: \
-        && dsc.sh \
-        && docker system prune -f \
-    && echo Upgrade\ base\ conda\ environment: \
-        && conda activate base \
-        && cua.sh \
-        && conda update conda \
-        && conda deactivate \
-    && echo Upgrade\ misc\ conda\ environment: \
-        && conda activate misc \
-        && cua.sh \
-        && conda update youtube-dl jupyterlab ipyparallel \
-        && pip install -U grip \
-        && conda deactivate \
-    && echo Upgrade\ dotfiles: \
-        && cd $HOME/Documents/projects/dotfiles/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ btrfs-du: \
-        && cd $HOME/Documents/apps/btrfs-du/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ terminology-themes: \
-        && cd $HOME/Documents/apps/terminology-themes/ \
-        && git pull \
-        && cd - \
-    && echo Upgrade\ gitignore: \
-        && cd $HOME/Documents/apps/gitignore/ \
-        && git pull \
-        && git fetch upstream \
-        && git merge upstream/master \
-        && cd - \
-    && echo Upgrade\ zimfw: \
-        && zimfw update \
-        && zimfw upgrade \
-    && cd $HOME/Documents/apps/iso \
-        && wget -N --trust-server-names=on \
-        https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
-        && cd -\
-    && nvim +'call dein#update()' +qall \
-    && dtr.sh && sudo zypper up --details \
-    && etr.sh && sudo zypper up --details \
-    && sudo zypper dup --details --from Packman\ Repository --allow-vendor-change \
-    && sudo rpmconf -a \
-    && sudo btrfs fi usage / \
-    && sudo zypper pa --orphaned --unneeded \
-    && sudo zypper ps
-fi
-}
-
-# cd to Downloads directory
-function dow {
-if command dow 2>/dev/null; then
-    command dow
-else
-    cd $HOME/Downloads/
-fi
-}
-
-# cd to projects directory
-function pro {
-if command pro 2>/dev/null; then
-    command pro
-else
-    cd $HOME/Documents/projects/
-fi
-}
-
-# cd to reference directory
-function ref {
-if command ref 2>/dev/null; then
-    command ref
-else
-    cd $HOME/Documents/reference/
-fi
-}
-
-# cd to apps directory
-function app {
-if command app 2>/dev/null; then
-    command app
-else
-    cd $HOME/Documents/apps/
-fi
-}
-
-# cd to other directory
-function oth {
-if command oth 2>/dev/null; then
-    command oth
-else
-    cd $HOME/Documents/other/
-fi
-}
-
 #
 # Aliases
-# For things I want to deliberately override
 #
 
-# Use correct program in Git.
+# Use correct program in Git
 alias vimdiff='nvim -d'
 
-# ---------------------------------------------------------------------------------------
-# TODO: Integrate with Zim's new syntax highlighting and move below aliases to functions.
-
-# ls with long listing, almost-all, and human-readable options.
+# ls with long listing, almost-all, and human-readable options
 alias lah='ls -lAh'
 
-# ls with almost-all option.
+# ls with long listing, almost-all, human-readable, and sorted by time options
+alias lap='ls -lAhtr'
+
+# ls with almost-all option
 alias lal='ls -A'
-# ---------------------------------------------------------------------------------------
+
+# diff with color
+alias diff='diff --color=auto'
