@@ -1,12 +1,12 @@
 [Desktop Entry]
 Comment[en_US]=
 Comment=
-Exec=/usr/bin/xinput set-prop 'SynPS/2 Synaptics TouchPad' 'Device Enabled' 0
+Exec=/usr/bin/xinput set-prop 'Raydium Corporation Raydium Touch System' 'Device Enabled' 0
 GenericName[en_US]=
 GenericName=
 MimeType=
-Name[en_US]=disable-finger-touch
-Name=disable-finger-touch
+Name[en_US]=disable-touchscreen
+Name=disable-touchscreen
 Path=
 StartupNotify=true
 Terminal=false
