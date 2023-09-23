@@ -213,6 +213,11 @@ function fup {
             && cd $HOME/Documents/projects/dotfiles/ \
             && git pull \
             && cd - \
+        && echo Upgrade\ terminology-themes: \
+            && cd $HOME/Documents/projects/terminology-themes/ \
+            && git pull \
+            && git fetch upstream && git merge upstream/master \
+            && cd - \
         && echo Upgrade\ gitignore: \
             && cd $HOME/Documents/apps/gitignore/ \
             && git pull \
