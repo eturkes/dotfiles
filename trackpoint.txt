@@ -18,16 +18,20 @@
 
 # ThinkPad TrackPoint settings
 # Top number is for speed
-# Bottom number is for sensitivity
+# Middle number is for sensitivity
+# Bottom number is drift time
 
 # Default openSUSE 15 GNOME3
 97
 128
+5
 
 # Suggestion in TPConfig
 255
 175
+5
 
 # My preference
-225
-175
+255
+255
+25
