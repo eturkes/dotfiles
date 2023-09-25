@@ -214,9 +214,8 @@ function fup {
             && git pull \
             && cd - \
         && echo Upgrade\ terminology-themes: \
-            && cd $HOME/Documents/projects/terminology-themes/ \
+            && cd $HOME/Documents/apps/terminology-themes/ \
             && git pull \
-            && git fetch upstream && git merge upstream/master \
             && cd - \
         && echo Upgrade\ gitignore: \
             && cd $HOME/Documents/apps/gitignore/ \
