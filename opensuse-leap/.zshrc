@@ -229,9 +229,11 @@ function fup {
             https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
             && cd -\
         && nvim +'call dein#update()' +qall \
-        && dtr.sh && sudo zypper up --details \
+        && dtr.sh \
+        && sudo zypper up --details \
         && sudo zypper in --details https://zoom.us/client/latest/zoom_openSUSE_x86_64.rpm \
-        && etr.sh && sudo zypper up --details \
+        && etr.sh \
+        && sudo zypper up --details \
         && sudo zypper dup --details --from packman-essentials --allow-vendor-change \
         && sudo rpmconf -a \
         && sudo btrfs fi usage / \
