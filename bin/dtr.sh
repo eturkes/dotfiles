@@ -27,5 +27,4 @@ sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d vscode && i=$((i+1)) \
     && sudo zypper mr -d nordvpn && i=$((i+1)) \
     && sudo zypper mr -d utilities && i=$((i+1)) \
-    && sudo zypper mr -d games_tools && i=$((i+1)) \
     && echo ${i} repos disabled
