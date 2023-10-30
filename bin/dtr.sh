@@ -28,4 +28,5 @@ sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d utilities && i=$((i+1)) \
     && sudo zypper mr -d devel_tools && i=$((i+1)) \
     && sudo zypper mr -d games_tools && i=$((i+1)) \
+    && sudo zypper mr -d filesystems && i=$((i+1)) \
     && echo ${i} repos disabled

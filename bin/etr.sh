@@ -28,4 +28,5 @@ sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e utilities && i=$((i+1)) \
     && sudo zypper mr -e devel_tools && i=$((i+1)) \
     && sudo zypper mr -e games_tools && i=$((i+1)) \
+    && sudo zypper mr -e filesystems && i=$((i+1)) \
     && echo ${i} repos enabled
