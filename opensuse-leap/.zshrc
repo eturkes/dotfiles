@@ -235,11 +235,11 @@ function fup {
             && cd -\
         && nvim +'call dein#update()' +qall \
         && dtr.sh \
-        && sudo zypper up --details \
-        && sudo zypper in --details https://zoom.us/client/latest/zoom_openSUSE_x86_64.rpm \
+        && sudo zypper up --details --auto-agree-with-licenses \
+        && sudo zypper in --details --auto-agree-with-licenses https://zoom.us/client/latest/zoom_openSUSE_x86_64.rpm \
         && etr.sh \
-        && sudo zypper up --details \
-        && sudo zypper dup --details --from packman-essentials --allow-vendor-change \
+        && sudo zypper up --details --auto-agree-with-licenses \
+        && sudo zypper dup --details --auto-agree-with-licenses --from packman-essentials --allow-vendor-change \
         && sudo rpmconf -a \
         && sudo btrfs fi usage / \
         && sudo zypper pa --orphaned --unneeded \
