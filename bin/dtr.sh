@@ -30,4 +30,5 @@ sudo zypper mr -d spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -d devel_tools && i=$((i+1)) \
     && sudo zypper mr -d games_tools && i=$((i+1)) \
     && sudo zypper mr -d filesystems && i=$((i+1)) \
+    && sudo zypper mr -d home_ykoba_m17n && i=$((i+1)) \
     && echo ${i} repos disabled
