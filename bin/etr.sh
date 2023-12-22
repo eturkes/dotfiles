@@ -26,7 +26,6 @@ sudo zypper mr -e spotify-easyrpm && i=$((i+1)) \
     && sudo zypper mr -e network:im:signal && i=$((i+1)) \
     && sudo zypper mr -e vscode && i=$((i+1)) \
     && sudo zypper mr -e nordvpn && i=$((i+1)) \
-    && sudo zypper mr -e utilities && i=$((i+1)) \
     && sudo zypper mr -e devel_tools && i=$((i+1)) \
     && sudo zypper mr -e games_tools && i=$((i+1)) \
     && sudo zypper mr -e filesystems && i=$((i+1)) \
