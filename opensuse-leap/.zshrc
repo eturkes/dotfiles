@@ -254,6 +254,9 @@ function fup {
 # cd to Downloads directory
 alias dow='cd $HOME/Downloads/'
 
+# cd to Downloads directory
+alias desk='cd $HOME/Desktop/'
+
 # cd to projects directory
 alias pro='cd $HOME/Documents/projects/'
 
