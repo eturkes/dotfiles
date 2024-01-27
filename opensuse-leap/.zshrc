@@ -234,7 +234,8 @@ function fup {
         && echo Upgrade\ zimfw: \
             && zimfw update \
             && zimfw upgrade \
-        && cd $HOME/Documents/apps/iso \
+        && echo Upgrade\ virtIO drivers: \
+            && cd $HOME/Documents/apps/iso \
             && wget -N --trust-server-names=on \
             https://fedorapeople.org/groups/virt/virtio-win/direct-downloads/stable-virtio/virtio-win.iso \
             && cd -\
