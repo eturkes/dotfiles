@@ -183,6 +183,9 @@ export PATH=~/.npm-global/bin:$PATH
 # Add Foundry to path
 export PATH="$PATH:/home/eturkes/.foundry/bin"
 
+# Add Spicetify to path
+export PATH=$PATH:/home/eturkes/.spicetify
+
 # Keep bin from dotfiles repo in separate symlink
 export PATH="$PATH:/home/eturkes/bin-dotfiles"
 
@@ -226,6 +229,8 @@ function fup {
             && cd $HOME/Documents/apps/gitignore/ \
             && git pull \
             && cd - \
+        && echo Upgrade\ Spicetify: \
+            && spicetify update \
         && echo Upgrade\ zimfw: \
             && zimfw update \
             && zimfw upgrade \
