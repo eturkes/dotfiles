@@ -253,6 +253,15 @@ function fup {
     fi
 }
 
+# Move items to trash
+function trash {
+    if command trash 2>/dev/null; then
+        command trash
+    else
+        kioclient move "$@" trash:/
+    fi
+}
+
 #
 # Aliases
 #
