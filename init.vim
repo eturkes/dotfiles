@@ -116,4 +116,4 @@ hi SignColumn ctermbg=None
 
 " Readable highlighting
 " Must be added at the end to work correctly
-hi Visual cterm=reverse ctermbg=NONE
+hi Visual cterm=reverse ctermbg=None
