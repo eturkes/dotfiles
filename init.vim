@@ -28,15 +28,15 @@ au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
 
 " Syntax highlighting colors
 colorscheme peachpuff
-au colorscheme * hi MatchParen ctermbg=White ctermfg=Black
+hi MatchParen cterm=reverse ctermbg=None
 set nohlsearch
 
-hi Constant   cterm=None ctermfg=White
+hi Constant   cterm=None ctermfg=Green
 hi Identifier cterm=None ctermfg=White
 hi Function   cterm=None ctermfg=White
 "hi Statement  cterm=None ctermfg=White
 hi PreProc    cterm=None ctermfg=White
-"hi Type       cterm=None ctermfg=White
+hi Type       cterm=None ctermfg=White
 hi Special    cterm=None ctermfg=White
 hi Delimiter  cterm=None ctermfg=White
 
