@@ -172,6 +172,9 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+# Add Spicetify to path
+export PATH=$PATH:/home/eturkes/.spicetify
+
 # Stop Ksshaskpass from popping up when using Git
 unset SSH_ASKPASS
 
