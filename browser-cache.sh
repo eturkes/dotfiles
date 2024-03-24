@@ -1,3 +1,5 @@
+#!/bin/sh
+
 #    This file is part of dotfiles.
 #    Copyright (C) 2020-2024  Emir Turkes
 #
@@ -16,8 +18,10 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-# From $HOME/.profile
-test -z "$PROFILEREAD" && . /etc/profile || true
-
 # Symlink browser caches to /tmp/
-$HOME/Documents/projects/dotfiles/browser-cache.sh
+
+mkdir /tmp/google-chrome-home-cache
+ln -s /tmp/google-chrome-home-cache $HOME/.cache/google-chrome
+
+mkdir /tmp/firefox-home-cache
+ln -s /tmp/firefox-home-cache $HOME/.cache/mozilla/firefox
