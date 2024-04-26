@@ -46,5 +46,6 @@ if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
 # Display a random cookie on each login.
 if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
 
-# Symlink browser caches to tmp.
-$HOME/Documents/projects/dotfiles/freebsd/browser-cache.sh
+# Symlink browser caches to /tmp.
+mkdir /tmp/firefox-eturkes-cache
+ln -s /tmp/firefox-eturkes-cache $HOME/.cache/mozilla/firefox
