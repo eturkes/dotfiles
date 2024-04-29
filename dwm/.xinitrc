@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #    This file is part of dotfiles.
 #    Copyright (C) 2020-2024  Emir Turkes
 #
@@ -19,4 +17,4 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 while true; do xsetroot -name "$(date +"%F %R" )"; sleep 60; done &
-dbus-launch --auto-syntax --exit-with-session dwm
+exec dwm
