@@ -48,4 +48,3 @@ if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
 
 # Symlink browser caches to /tmp.
 mkdir /tmp/firefox-eturkes-cache
-ln -s /tmp/firefox-eturkes-cache $HOME/.cache/mozilla/firefox
