@@ -17,4 +17,5 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 while true; do xsetroot -name "$(date +"%F %R" )"; sleep 60; done &
+xautolock -time 15 -locker slock &
 exec dwm
