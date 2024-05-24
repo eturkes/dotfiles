@@ -18,4 +18,9 @@
 
 while true; do xsetroot -name "$(date +"%F %R" )"; sleep 60; done &
 xautolock -time 15 -locker slock &
-exec dwm
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=xim
+export XMODIFIERS=@im=fcitx
+/usr/local/bin/mozc start
+fcitx -r -d
+exec dbus-launch dwm
