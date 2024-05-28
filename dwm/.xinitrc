@@ -17,7 +17,7 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 while true; do xsetroot -name "$(date +"%F %R" )"; sleep 60; done &
-xautolock -time 15 -locker slock &
+xautolock -time 10 -locker slock &
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=xim
 export XMODIFIERS=@im=fcitx
