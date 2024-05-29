@@ -23,4 +23,5 @@ export QT_IM_MODULE=xim
 export XMODIFIERS=@im=fcitx
 /usr/local/bin/mozc start
 fcitx -r -d
+redshift &
 exec dbus-launch dwm
