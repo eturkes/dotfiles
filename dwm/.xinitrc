@@ -16,7 +16,7 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-while true; do xprop -root -set WM_NAME " $(date +"%F %R" )"; sleep 60; done &
+(conky | while read LINE; do xprop -root -set WM_NAME " $LINE"; done) &
 xautolock -time 10 -locker slock &
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=xim
