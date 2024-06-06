@@ -28,6 +28,7 @@ au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
 
 " Syntax highlighting colors
 colorscheme peachpuff
+set notermguicolors
 hi MatchParen cterm=reverse ctermbg=None
 set nohlsearch
 
