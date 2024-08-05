@@ -17,7 +17,7 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 (conky | while read LINE; do xprop -root -set WM_NAME " $LINE"; done) &
-xautolock -time 10 -locker slock &
+xautolock -time 15 -locker slock &
 export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=xim
 export XMODIFIERS=@im=fcitx
