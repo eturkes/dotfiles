@@ -18,8 +18,8 @@ index 061ad66..05f18e5 100644
 -	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
 +	{ MODKEY,                       XK_j,      focusstackvis,  {.i = +1 } },
 +	{ MODKEY,                       XK_k,      focusstackvis,  {.i = -1 } },
-+	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = +1 } },
-+	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = -1 } },
++	{ MODKEY|ShiftMask,             XK_k,      focusstackhid,  {.i = +1 } },
++	{ MODKEY|ShiftMask,             XK_j,      focusstackhid,  {.i = -1 } },
  	{ MODKEY,                       XK_i,      incnmaster,     {.i = +1 } },
  	{ MODKEY,                       XK_d,      incnmaster,     {.i = -1 } },
  	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
@@ -29,7 +29,7 @@ index 061ad66..05f18e5 100644
  	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 +	{ MODKEY,                       XK_s,      show,           {0} },
 +	{ MODKEY|ShiftMask,             XK_s,      showall,        {0} },
-+	{ MODKEY,                       XK_h,      hide,           {0} },
++	{ MODKEY,                       XK_a,      hide,           {0} },
  	TAGKEYS(                        XK_1,                      0)
  	TAGKEYS(                        XK_2,                      1)
  	TAGKEYS(                        XK_3,                      2)
