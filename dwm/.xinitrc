@@ -23,5 +23,5 @@ export QT_IM_MODULE=xim
 export XMODIFIERS=@im=fcitx
 /usr/local/bin/mozc start
 fcitx -r -d
-sctd --latitude 51.51 --longitude -0.12 &
+sctd --latitude 39.89 --longitude 32.88 &
 exec dbus-launch dwm
