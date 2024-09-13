@@ -20,4 +20,5 @@
 
 # Symlink browser caches to /tmp/
 mkdir /tmp/google-chrome-home-cache
+mkdir /tmp/chromium-home-cache
 mkdir /tmp/firefox-home-cache
