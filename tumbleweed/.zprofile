@@ -20,4 +20,4 @@
 test -z "$PROFILEREAD" && . /etc/profile || true
 
 # Symlink browser caches to /tmp/
-$HOME/Documents/projects/dotfiles/tumbleweed/browser-cache.sh
+$HOME/Documents/pro/dotfiles/tumbleweed/browser-cache.sh
