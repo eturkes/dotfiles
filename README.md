@@ -19,6 +19,3 @@
 -->
 
 # Dot & Config Files
-#### *These files are maintained to varying degrees*
-
-Symlinks point to files that are not version controlled by Git
