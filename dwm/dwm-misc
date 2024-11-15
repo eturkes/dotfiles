@@ -1,5 +1,5 @@
 --- /usr/ports/x11-wm/dwm/work/dwm-6.5/config.def.h	2024-03-19 14:24:52.000000000 +0300
-+++ config.def.h	2024-11-15 19:36:28.288256000 +0300
++++ config.def.h	2024-11-15 21:48:18.866350000 +0300
 @@ -4,7 +4,7 @@
  static const unsigned int borderpx  = 1;        /* border pixel of windows */
  static const unsigned int snap      = 32;       /* snap pixel */
@@ -21,3 +21,12 @@
  static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
  
  static const Layout layouts[] = {
+@@ -58,7 +58,7 @@
+ /* commands */
+ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+ static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+-static const char *termcmd[]  = { "st", NULL };
++static const char *termcmd[]  = { "st", "-e", "tmux", NULL };
+ 
+ static const Key keys[] = {
+ 	/* modifier                     key        function        argument */
