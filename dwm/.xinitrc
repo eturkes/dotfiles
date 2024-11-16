@@ -25,4 +25,5 @@ export XMODIFIERS=@im=fcitx
 fcitx -r -d
 sctd --latitude 39.89 --longitude 32.88 &
 walland -s bing -b feh
+dunst &
 exec dbus-launch dwm
