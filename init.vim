@@ -26,6 +26,9 @@ set nu rnu
 au colorscheme * hi LineNr ctermbg=Blue ctermfg=Black
 au colorscheme * hi CursorLineNr ctermbg=None ctermfg=White
 
+highlight CursorLine cterm=NONE ctermbg=NONE ctermfg=NONE guibg=NONE guifg=NONE
+set cursorline
+
 " Syntax highlighting colors
 colorscheme peachpuff
 set notermguicolors
