@@ -32,7 +32,6 @@ set cursorline
 " Syntax highlighting colors
 colorscheme peachpuff
 set notermguicolors
-hi MatchParen cterm=reverse ctermbg=None
 set nohlsearch
 
 hi Constant   cterm=None ctermfg=Green
