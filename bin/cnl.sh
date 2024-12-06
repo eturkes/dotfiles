@@ -20,11 +20,11 @@
 
 # Checks directory for files that lack a newline character 
 
-# The following section is adapted from content on Stack 
+# The following section is adapted from content on Stack Exchange 
 # https://stackoverflow.com/questions/3261925/how-to-fix-no-newline-at-end-of-file-warning-for-lots-of-files
 # Question asked by: Elliot 
 # https://stackoverflow.com/users/103213/elliot
-# Answer given by: Time Abell 
+# Answer given by: Tim Abell 
 # https://stackoverflow.com/users/10245/tim-abell
 # START adapted content
 for i in ./*(D); do \
