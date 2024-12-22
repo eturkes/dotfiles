@@ -1,0 +1,67 @@
+#    This file is part of dotfiles.
+#    Copyright (C) 2020-2024  Emir Turkes
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Emir Turkes can be contacted at emir.turkes@eturkes.com
+
+##### Sample Yashrc #####
+# This is a sample initialization script for yash. Copy this file to ~/.yashrc
+# and add your favorite customization to it.
+
+# Load global initialization script, if exists.
+if [ -f /etc/yashrc ]; then
+  . /etc/yashrc
+fi
+
+# Firstly, load the common customization script.
+# If you don't like settings applied in this script, remove this line.
+#. --autoload --no-alias initialization/common
+
+if [ -f ~/.profile ]; then
+  . ~/.profile
+fi
+
+# These are additional aliases that are not defined in the common script.
+# Uncomment to enable them.
+#alias g='grep'
+#alias l='$PAGER'
+#alias --global L='|$PAGER'
+#alias --global N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
+
+# Uncomment if you want to clear the screen with Ctrl-L.
+#bindkey --emacs '\^L' clear-and-redraw-all
+#bindkey --vi-insert '\^L' clear-and-redraw-all
+#bindkey --vi-command '\^L' clear-and-redraw-all
+
+# Uncomment to enable direnv support. (jq required)
+#_update_direnv() {
+#  eval "$(
+#    direnv export json |
+#    jq -r 'to_entries | .[] |
+#    if .value == null then
+#      @sh "unset \(.key)"
+#    else
+#      @sh "export \(.key)=\(.value)"
+#    end'
+#  )"
+#}
+#_update_direnv
+#YASH_AFTER_CD=("$YASH_AFTER_CD" '_update_direnv')
+
+# And add your own customization below.
+
+
+
+# vim: set et sw=2 sts=2 tw=78 ft=sh:
