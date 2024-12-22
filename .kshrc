@@ -42,8 +42,6 @@ case "$-" in
 #	console=$(sysctl kern.consdev)
 	console=${console#*=}
 
-	set -o emacs
-
 	case "$TERM" in
 	sun*-s)
 		# sun console with status line
@@ -100,6 +98,8 @@ HISTCONTROL=ingnoredups
 
 export VISUAL="nvim"
 export EDITOR="$VISUAL"
+
+set -o emacs
 
 alias ls='ls --color=auto'
 alias dir='dir --color=auto'
