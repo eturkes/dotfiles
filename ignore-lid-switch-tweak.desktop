@@ -1,0 +1,4 @@
+[Desktop Entry]
+Type=Application
+Name=ignore-lid-switch-tweak
+Exec=/home/eturkes/Documents/pro/dotfiles/gnome-tweak-tool-lid-inhibitor
