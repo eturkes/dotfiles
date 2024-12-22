@@ -8,6 +8,7 @@ Oh My Zsh https://github.com/robbyrussell/oh-my-zsh
 kitty https://github.com/kovidgoyal/kitty
 xkeyboard-config https://gitlab.freedesktop.org/xkeyboard-config/xkeyboard-config
 GNOME Project https://www.gnome.org/
+oksh https://github.com/ibara/oksh
 
 Respective copyright notices below:
 
@@ -1638,3 +1639,19 @@ copy of the Program in return for a fee.
                      END OF TERMS AND CONDITIONS
 
 ########################################################################################
+
+# oksh https://github.com/ibara/oksh
+
+#	$From: ksh.kshrc,v 1.4 1992/12/05 13:14:48 sjg Exp $
+#
+#	@(#)Copyright (c) 1991 Simon J. Gerraty
+#
+#	This file is provided in the hope that it will
+#	be of use.  There is absolutely NO WARRANTY.
+#	Permission to copy, redistribute or otherwise
+#	use this file is hereby granted provided that
+#	the above copyright notice and this notice are
+#	left intact.
+
+########################################################################################
+
