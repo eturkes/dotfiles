@@ -46,7 +46,9 @@ esac
 : ${PAGER:=less} ${EDITOR:=nvim} ${FCEDIT:=$EDITOR}
 : ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
 
-HISTFILE=~/.yash_history HISTSIZE=100000
+HISTFILE=~/.yash_history
+HISTSIZE=100000
+HISTRMDUP=100000
 
 # emulate bash's $SHLVL
 if [ "${_old_shlvl+set}" != set ]; then
