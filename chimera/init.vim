@@ -22,3 +22,6 @@ augroup vimrc-remember-cursor-position
 augroup END
 
 set clipboard=unnamedplus
+
+set title
+set titlestring=nvim:%F
