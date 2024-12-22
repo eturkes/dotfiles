@@ -16,52 +16,113 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-##### Sample Yashrc #####
-# This is a sample initialization script for yash. Copy this file to ~/.yashrc
-# and add your favorite customization to it.
-
-# Load global initialization script, if exists.
-if [ -f /etc/yashrc ]; then
-  . /etc/yashrc
-fi
-
-# Firstly, load the common customization script.
-# If you don't like settings applied in this script, remove this line.
-#. --autoload --no-alias initialization/common
-
 if [ -f ~/.profile ]; then
   . ~/.profile
 fi
 
-# These are additional aliases that are not defined in the common script.
-# Uncomment to enable them.
-#alias g='grep'
-#alias l='$PAGER'
-#alias --global L='|$PAGER'
-#alias --global N='>/dev/null 2>&1' N1='>/dev/null' N2='2>/dev/null'
+set --emacs
+bindkey --emacs '\^N' beginning-search-forward
+bindkey --emacs '\^O' clear-candidates
+bindkey --emacs '\^P' beginning-search-backward
+bindkey --emacs '\N' complete-next-column
+bindkey --emacs '\P' complete-prev-column
+bindkey --emacs '\^[[1;5D' backward-emacsword
+bindkey --emacs '\^[[1;5C' forward-emacsword
 
-# Uncomment if you want to clear the screen with Ctrl-L.
-#bindkey --emacs '\^L' clear-and-redraw-all
-#bindkey --vi-insert '\^L' clear-and-redraw-all
-#bindkey --vi-command '\^L' clear-and-redraw-all
+# normally yash is more POSIX-compliant than /bin/sh :-)
+sh() { yash --posix "$@"; }
+yash() { command yash "$@"; }
+# By re-defining 'yash' using the 'command' built-in, the 'jobs' built-in
+# prints a command name that exposes the arguments like
+# 'yash --posix -n foo.sh' rather than a command name that hides the
+# arguments like 'yash --posix "${@}"'. This applies to the 'yash' command
+# invoked via the 'sh' function.
 
-# Uncomment to enable direnv support. (jq required)
-#_update_direnv() {
-#  eval "$(
-#    direnv export json |
-#    jq -r 'to_entries | .[] |
-#    if .value == null then
-#      @sh "unset \(.key)"
-#    else
-#      @sh "export \(.key)=\(.value)"
-#    end'
-#  )"
-#}
-#_update_direnv
-#YASH_AFTER_CD=("$YASH_AFTER_CD" '_update_direnv')
+# ensure job control works as expected
+case $- in (*m*)
+  trap - TSTP TTIN TTOU
+esac
 
-# And add your own customization below.
+: ${PAGER:=less} ${EDITOR:=nvim} ${FCEDIT:=$EDITOR}
+: ${LOGNAME:=$(logname)} ${HOSTNAME:=$(uname -n)}
 
+HISTFILE=~/.yash_history HISTSIZE=100000
 
+# emulate bash's $SHLVL
+if [ "${_old_shlvl+set}" != set ]; then
+  _old_shlvl=${SHLVL-}
+fi
+SHLVL=$((_old_shlvl+1)) 2>/dev/null || SHLVL=1
+export SHLVL
 
-# vim: set et sw=2 sts=2 tw=78 ft=sh:
+# initialize event handlers
+COMMAND_NOT_FOUND_HANDLER=()
+PROMPT_COMMAND=()
+POST_PROMPT_COMMAND=()
+YASH_AFTER_CD=()
+
+# define prompt
+if [ -n "${SSH_CONNECTION-}" ]; then
+  _hc='\fy.'     # yellow hostname for SSH remote
+else
+  _hc='\fg.'     # green hostname for local
+fi
+if [ "$(id -u)" -eq 0 ]; then
+  _uc='\fr.'     # red username for root
+  _2c='\fr.'     # red PS2 for root
+else
+  _uc=$_hc _hc=  # same username color as hostname for non-root user
+  _2c=           # PS2 in normal color for non-root user
+fi
+# The main prompt ($YASH_PS1) contains the username, hostname, working
+# directory, last exit status (only if non-zero), and $SHLVL (only if
+# non-one).
+YASH_PS1=$_uc'${LOGNAME}'$_hc'@${HOSTNAME%%.*}\fd. '\
+'${${${PWD:/~/\~}##*/}:-$PWD} ${{?:/0/}:+\\fr.$?\\fd. }${{SHLVL-0}:/1}\$ '
+YASH_PS1R='\fc.${_vcs_info}'
+YASH_PS1S='\f.'
+YASH_PS2=$_2c'> '
+#YASH_PS2R=
+YASH_PS2S=$YASH_PS1S
+YASH_PS4='\fm.+ '
+YASH_PS4S='\fm.'
+unset _hc _uc _2c
+# No escape sequences allowed in the POSIXly-correct mode.
+PS1='${LOGNAME}@${HOSTNAME%%.*} '$PS1
+
+# find escape sequence to change terminal window title
+case "$TERM" in
+  (xterm|xterm[+-]*|gnome|gnome[+-]*|putty|putty[+-]*|cygwin)
+    _tsl='\033];' _fsl='\a' ;;
+  (*)
+    _tsl=$( (tput tsl 0; echo) 2>/dev/null |
+    sed -e 's;\\;\\\\;g' -e 's;ESC;\\033;g' -e 's;^G;\\a;g' -e 's;%;%%;g')
+    _fsl=$( (tput fsl  ; echo) 2>/dev/null |
+    sed -e 's;\\;\\\\;g' -e 's;ESC;\\033;g' -e 's;^G;\\a;g' -e 's;%;%%;g') ;;
+esac
+# if terminal window title can be changed...
+if [ "$_tsl" ] && [ "$_fsl" ]; then
+
+  # set terminal window title on each prompt
+  _set_term_title()
+  if [ -t 2 ]; then
+    printf "$_tsl"'%s@%s:%s'"$_fsl" "${LOGNAME}" "${HOSTNAME%%.*}" \
+      "${${PWD:/$HOME/\~}/#$HOME\//\~\/}" >&2
+  fi
+  PROMPT_COMMAND=("$PROMPT_COMMAND" '_set_term_title')
+
+  # reset window title when changing host or user
+  ssh() {
+    if [ -t 2 ]; then printf "$_tsl"'ssh %s'"$_fsl" "$*" >&2; fi
+    command ssh "$@"
+  }
+  su() {
+    if [ -t 2 ]; then printf "$_tsl"'su %s'"$_fsl" "$*" >&2; fi
+    command su "$@"
+  }
+  sudo() {
+    if [ -t 2 ]; then printf "$_tsl"'sudo %s'"$_fsl" "$*" >&2; fi
+    command sudo "$@"
+  }
+
+fi
