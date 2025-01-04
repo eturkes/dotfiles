@@ -18,3 +18,5 @@
 
 export CLICOLOR=1
 alias ls="ls -G"
+
+PS1="%n@$(networksetup -getcomputername) %1~ %# "
