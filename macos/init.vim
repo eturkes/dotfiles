@@ -24,4 +24,4 @@ augroup END
 set clipboard=unnamedplus
 
 set title
-set titlestring=vim:%F
+set titlestring=nvim:%F
