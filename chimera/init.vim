@@ -25,3 +25,5 @@ set clipboard=unnamedplus
 
 set title
 set titlestring=nvim:%F
+
+hi Normal guibg=NONE ctermbg=NONE
