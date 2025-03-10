@@ -23,3 +23,7 @@ PS1=%F{green}"%n@%m%f %1~ %# "
 
 export EDITOR=nvim
 export VISUAL=nvim
+
+source $(brew --prefix)/share/zsh-history-substring-search/zsh-history-substring-search.zsh
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
