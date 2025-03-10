@@ -19,7 +19,7 @@
 export CLICOLOR=1
 alias ls="ls -G"
 
-PS1=%F{034}"%n@%m%f %1~ %# "
+PS1=%F{036}"%n@%m%f %1~ %# "
 
 export EDITOR=nvim
 export VISUAL=nvim
