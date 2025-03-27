@@ -96,8 +96,8 @@ HISTFILE="$HOME/.ksh_history"
 HISTSIZE=100000
 HISTCONTROL=ingnoredups
 
-export EDITOR="nvim"
-export VISUAL="nvim"
+export EDITOR=nvim
+export VISUAL=nvim
 
 set -o emacs
 
