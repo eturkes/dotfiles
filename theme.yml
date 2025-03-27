@@ -1,0 +1,128 @@
+#    This file is part of dotfiles.
+#    Copyright (C) 2020-2025  Emir Turkes
+#
+#    This program is free software: you can redistribute it and/or modify
+#    it under the terms of the GNU General Public License as published by
+#    the Free Software Foundation, either version 3 of the License, or
+#    (at your option) any later version.
+#
+#    This program is distributed in the hope that it will be useful,
+#    but WITHOUT ANY WARRANTY; without even the implied warranty of
+#    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+#    GNU General Public License for more details.
+#
+#    You should have received a copy of the GNU General Public License
+#    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+#
+#    Emir Turkes can be contacted at emir.turkes@eturkes.com
+
+colourful: true
+
+filekinds:
+  normal: {foreground: Default}
+  directory: {foreground: Blue, is_bold: false}
+  symlink: {foreground: Cyan}
+  pipe: {foreground: Yellow}
+  block_device: {foreground: Yellow, is_bold: false}
+  char_device: {foreground: Yellow, is_bold: false}
+  socket: {foreground: Red, is_bold: false}
+  special: {foreground: Yellow}
+  executable: {foreground: Green, is_bold: false}
+  mount_point: {foreground: Blue, is_bold: false, is_underline: true}
+
+perms:
+  user_read: {foreground: Default, is_bold: false}
+  user_write: {foreground: Default, is_bold: false}
+  user_execute_file: {foreground: Default, is_bold: false, is_underline: true}
+  user_execute_other: {foreground: Default, is_bold: false}
+  group_read: {foreground: Default}
+  group_write: {foreground: Default}
+  group_execute: {foreground: Default}
+  other_read: {foreground: Default}
+  other_write: {foreground: Default}
+  other_execute: {foreground: Default}
+  special_user_file: {foreground: Default}
+  special_other: {foreground: Default}
+  attribute: {foreground: Default}
+
+size:
+  major: {foreground: Default, is_bold: false}
+  minor: {foreground: Default}
+  number_byte: {foreground: Default, is_bold: false}
+  number_kilo: {foreground: Default, is_bold: false}
+  number_mega: {foreground: Default, is_bold: false}
+  number_giga: {foreground: Default, is_bold: false}
+  number_huge: {foreground: Default, is_bold: false}
+  unit_byte: {foreground: Default}
+  unit_kilo: {foreground: Default}
+  unit_mega: {foreground: Default}
+  unit_giga: {foreground: Default}
+  unit_huge: {foreground: Default}
+
+users:
+  user_you: {foreground: Default, is_bold: false}
+  user_root: {foreground: Default}
+  user_other: {foreground: Default}
+  group_yours: {foreground: Default, is_bold: false}
+  group_other: {foreground: Default}
+  group_root: {foreground: Default}
+
+links:
+  normal: {foreground: Red, is_bold: false}
+  multi_link_file: {foreground: Red, background: Yellow}
+
+git:
+  new: {foreground: Green}
+  modified: {foreground: Blue}
+  deleted: {foreground: Red}
+  renamed: {foreground: Yellow}
+  typechange: {foreground: Purple}
+  ignored: {foreground: Default, is_dimmed: true}
+  conflicted: {foreground: Red}
+
+git_repo:
+  branch_main: {foreground: Green}
+  branch_other: {foreground: Yellow}
+  git_clean: {foreground: Green}
+  git_dirty: {foreground: Yellow}
+
+security_context:
+  colon: {foreground: Default, is_dimmed: true}
+  user: {foreground: Blue}
+  role: {foreground: Green}
+  typ: {foreground: Yellow}
+  range: {foreground: Cyan}
+
+file_type:
+  image: {foreground: Purple}
+  video: {foreground: Purple, is_bold: false}
+  music: {foreground: Cyan}
+  lossless: {foreground: Cyan, is_bold: false}
+  crypto: {foreground: Green, is_bold: false}
+  document: {foreground: Green}
+  compressed: {foreground: Red}
+  temp: {foreground: White}
+  compiled: {foreground: Yellow}
+  build: {foreground: Yellow, is_bold: false, is_underline: true}
+  source: {foreground: Yellow, is_bold: false}
+
+punctuation: {foreground: DarkGray, is_bold: false}
+date: {foreground: Default}
+inode: {foreground: Purple}
+blocks: {foreground: Cyan}
+header: {foreground: Default, is_underline: true}
+octal: {foreground: Purple}
+flags: {foreground: Default}
+
+symlink_path: {foreground: Cyan}
+control_char: {foreground: Red}
+broken_symlink: {foreground: Red}
+broken_path_overlay: {foreground: Default, is_underline: true}
+
+filenames:
+  # Custom filename-based overrides
+  # Cargo.toml: {icon: {glyph: 🦀}}
+
+extensions:
+  # Custom extension-based overrides
+  # rs: {filename: {foreground: Red}, icon: {glyph: 🦀}}
