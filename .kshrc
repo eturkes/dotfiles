@@ -96,8 +96,8 @@ HISTFILE="$HOME/.ksh_history"
 HISTSIZE=100000
 HISTCONTROL=ingnoredups
 
+export EDITOR="nvim"
 export VISUAL="nvim"
-export EDITOR="$VISUAL"
 
 set -o emacs
 
@@ -107,6 +107,7 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
+alias vimdiff='nvim -d'
 
 # Use fzf to cd into a dir or parent dir of a file
 if ! command -v cdz >/dev/null 2>&1; then
