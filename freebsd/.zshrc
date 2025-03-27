@@ -159,3 +159,14 @@ alias vimdiff='nvim -d'
 
 # diff with color
 alias diff='diff --color=auto'
+
+# Use fzf to cd into a dir or parent dir of a file
+if ! command -v cdz >/dev/null 2>&1; then
+  cdz() {
+    dir="$(fd | fzf)"
+    if [[ -f "$dir" ]]; then
+      dir="$(dirname "$dir")"
+    fi
+    cd "$dir"
+  }
+fi

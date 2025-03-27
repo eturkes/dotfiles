@@ -173,6 +173,17 @@ alias vimdiff='nvim -d'
 # diff with color
 alias diff='diff --color=auto'
 
+# Use fzf to cd into a dir or parent dir of a file
+if ! command -v cdz >/dev/null 2>&1; then
+  cdz() {
+    dir="$(fd | fzf)"
+    if [[ -f "$dir" ]]; then
+      dir="$(dirname "$dir")"
+    fi
+    cd "$dir"
+  }
+fi
+
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 __conda_setup="$('/home/eturkes/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
