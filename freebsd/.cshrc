@@ -28,6 +28,7 @@
 #alias la	ls -aF
 #alias lf	ls -FA
 #alias ll	ls -lAF
+alias ls	ls -G
 
 # These are normally set through /etc/login.conf.  You may override them here
 # if wanted.
