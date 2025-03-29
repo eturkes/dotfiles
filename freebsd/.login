@@ -1,5 +1,3 @@
-#!/bin/sh
-
 #    This file is part of dotfiles.
 #    Copyright (C) 2020-2025  Emir Turkes
 #
@@ -18,14 +16,17 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-(conky | while read LINE; do xprop -root -set WM_NAME " $LINE"; done) &
-xautolock -time 10 -locker slock &
-export GTK_IM_MODULE=fcitx
-export QT_IM_MODULE=xim
-export XMODIFIERS=@im=fcitx
-/usr/local/bin/mozc start
-fcitx -r -d
-sctd --latitude 39.89 --longitude 32.88 &
-walland -s bing -b feh
-dunst &
-exec dbus-launch dwm
+#
+# .login - csh login script, read by login shell, after `.cshrc' at login.
+#
+# See also csh(1), environ(7).
+#
+
+# Query terminal size; useful for serial lines.
+if ( -x /usr/bin/resizewin ) /usr/bin/resizewin -z
+
+# Display a random cookie on each login.
+if ( -x /usr/bin/fortune ) /usr/bin/fortune freebsd-tips
+
+# Symlink browser caches to /tmp/.
+$HOME/pro/dotfiles/freebsd/browser-cache.tcsh

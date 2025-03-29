@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/tcsh
 
 #    This file is part of dotfiles.
 #    Copyright (C) 2020-2025  Emir Turkes
