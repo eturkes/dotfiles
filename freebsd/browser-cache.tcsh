@@ -19,5 +19,5 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 # Symlink browser caches to /tmp/
-mkdir /tmp/chromium-home-cache
+mkdir /tmp/chrome-home-cache
 mkdir /tmp/firefox-home-cache
