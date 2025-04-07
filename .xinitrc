@@ -28,4 +28,5 @@ fcitx -r -d
 sctd --latitude 39.89 --longitude 32.88 &
 walland -s bing -b feh
 dunst &
+sndiod -f rsnd/1 -m play,mon
 exec dbus-launch --exit-with-session dwm
