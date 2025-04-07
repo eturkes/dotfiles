@@ -29,4 +29,6 @@ sctd --latitude 39.89 --longitude 32.88 &
 walland -s bing -b feh
 dunst &
 sndiod -f rsnd/1 -m play,mon
+mkdir /tmp/chrome-home-cache
+mkdir /tmp/firefox-home-cache
 exec dbus-launch --exit-with-session dwm
