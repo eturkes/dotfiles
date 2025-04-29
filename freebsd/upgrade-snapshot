@@ -1,0 +1,11 @@
+#!/bin/tcsh
+
+zfs destroy zroot/compat@pre
+zfs destroy zroot/usr/local@pre
+zfs destroy zroot/var/db/pkg@pre
+zfs destroy zroot/var/db/ports@pre
+
+zfs snapshot zroot/compat@pre
+zfs snapshot zroot/usr/local@pre
+zfs snapshot zroot/var/db/pkg@pre
+zfs snapshot zroot/var/db/ports@pre
