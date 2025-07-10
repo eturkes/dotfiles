@@ -19,6 +19,3 @@
 # From $HOME/.profile
 test -z "$PROFILEREAD" && . /etc/profile || true
 export EDITOR=/usr/bin/nvim
-
-# Symlink browser caches to /tmp/
-$HOME/Documents/pro/dotfiles/tumbleweed/browser-cache.sh
