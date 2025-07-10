@@ -150,10 +150,6 @@ PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_m
 
 zstyle ':zim' disable-version-check yes
 
-# From $HOME/.bashrc
-export EDITOR=/usr/bin/nvim
-test -s $HOME/.alias && . $HOME/.alias || true
-
 # Choose man page automatically when there are multiple
 export set MAN_POSIXLY_CORRECT=1
 
