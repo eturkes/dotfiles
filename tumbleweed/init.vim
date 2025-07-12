@@ -85,7 +85,6 @@ call dein#add(s:dein_src)
 call dein#add('vim-airline/vim-airline')
 call dein#add('vim-airline/vim-airline-themes')
 call dein#add('ConradIrwin/vim-bracketed-paste')
-call dein#add('ajh17/VimCompletesMe')
 call dein#add('sheerun/vim-polyglot')
 call dein#add('airblade/vim-gitgutter')
 
