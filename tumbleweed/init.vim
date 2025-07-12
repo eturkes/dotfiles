@@ -106,7 +106,7 @@ syntax enable
 "endif
 
 " vim-airline settings
-let g:airline_theme='simple'
+let g:airline_theme='sol'
 
 " vim-gitgutter settings
 set updatetime=100
