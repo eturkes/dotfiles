@@ -18,4 +18,9 @@
 
 export EDITOR=/usr/bin/nvim
 
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
 mkdir /tmp/google-chrome-home-cache
