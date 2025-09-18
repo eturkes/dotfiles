@@ -48,6 +48,9 @@ set title
 set titleold="Terminal"
 set titlestring=%t
 
+" Yank to clipboard
+set clipboard=unnamedplus
+
 " Remember last cursor position 
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 &&
     \ line("'\"") <= line("$") | exe "normal! g`\"" | endif
