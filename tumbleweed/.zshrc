@@ -153,6 +153,9 @@ zstyle ':zim' disable-version-check yes
 # Choose man page automatically when there are multiple
 export set MAN_POSIXLY_CORRECT=1
 
+# Add Spicetify to path
+export PATH=$PATH:/home/eturkes/.spicetify
+
 #
 # Aliases
 #
