@@ -166,6 +166,7 @@ secring.*
 
 # General
 .DS_Store
+__MACOSX/
 .AppleDouble
 .LSOverride
 ]con[
