@@ -182,6 +182,32 @@ secring.*
 nohup.out
 
 #
+# Global/MicrosoftOffice.gitignore
+# https://github.com/github/gitignore
+#
+
+*.tmp
+
+# Word temporary
+~$*.doc*
+~$*.dot*
+
+# Word Auto Backup File
+Backup of *.doc*
+
+# Excel temporary
+~$*.xls*
+
+# Excel Backup File
+*.xlk
+
+# PowerPoint temporary
+~$*.ppt*
+
+# Visio autosave temporary files
+*.~vsd*
+
+#
 # Global/Patch.gitignore
 # https://github.com/github/gitignore
 #
@@ -214,3 +240,51 @@ Sessionx.vim
 tags
 # Persistent undo
 [._]*.un~
+
+#
+# Global/Virtualenv.gitignore
+# https://github.com/github/gitignore
+#
+
+# Virtualenv
+# https://realpython.com/python-virtual-environments-a-primer/#the-virtualenv-project
+.Python
+[Bb]in
+[Ii]nclude
+[Ll]ib
+[Ll]ib64
+[Ll]ocal
+[Ss]cripts
+pyvenv.cfg
+.venv
+pip-selfcheck.json
+
+#
+# Global/Windows.gitignore
+# https://github.com/github/gitignore
+#
+
+# Windows thumbnail cache files
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+
+# Dump file
+*.stackdump
+
+# Folder config file
+[Dd]esktop.ini
+
+# Recycle Bin used on file shares
+$RECYCLE.BIN/
+
+# Windows Installer files
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+
+# Windows shortcuts
+*.lnk
