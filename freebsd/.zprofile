@@ -47,4 +47,4 @@ if [ -x /usr/bin/resizewin ] ; then /usr/bin/resizewin -z ; fi
 if [ -x /usr/bin/fortune ] ; then /usr/bin/fortune freebsd-tips ; fi
 
 # Symlink browser caches to /tmp/.
-$HOME/pro/dotfiles/freebsd/browser-cache.sh
+$HOME/app/dotfiles/freebsd/browser-cache.sh
