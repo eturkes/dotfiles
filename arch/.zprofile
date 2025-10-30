@@ -23,4 +23,4 @@ export QT_IM_MODULE=fcitx
 export SDL_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-mkdir /tmp/google-chrome-home-cache
+mkdir /tmp/browser-os-home-cache
