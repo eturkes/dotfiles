@@ -64,10 +64,10 @@ set mouse=a
 set nocompatible
 
 " Set Dein base path (required)
-let s:dein_base = '/home/eturkes/.local/arch/.cache/dein'
+let s:dein_base = '/home/eturkes/.cache/dein'
 
 " Set Dein source path (required)
-let s:dein_src = '/home/eturkes/.local/arch/.cache/dein/repos/github.com/Shougo/dein.vim'
+let s:dein_src = '/home/eturkes/.cache/dein/repos/github.com/Shougo/dein.vim'
 
 " Set Dein runtime path (required)
 execute 'set runtimepath+=' . s:dein_src

@@ -148,35 +148,8 @@ unset key
 
 PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
 
-zstyle ':zim' disable-version-check yes
-
-# Choose man page automatically when there are multiple
-export set MAN_POSIXLY_CORRECT=1
-
-# Add Spicetify to path
-export PATH=$PATH:/home/eturkes/.spicetify
-
 #
 # Aliases
 #
 
-# Use correct program in Git
-alias vimdiff='nvim -d'
-
-# diff with color
-alias diff='diff --color=auto'
-
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/eturkes/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/home/eturkes/miniconda3/etc/profile.d/conda.sh" ]; then
-        . "/home/eturkes/miniconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/home/eturkes/miniconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
+test -s ~/.alias && . ~/.alias || true
