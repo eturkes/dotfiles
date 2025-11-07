@@ -148,6 +148,8 @@ unset key
 
 PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
 
+export EDITOR=/usr/bin/nvim
+
 #
 # Aliases
 #
