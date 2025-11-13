@@ -16,10 +16,10 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-test -s ~/.alias && . ~/.alias || true
-HISTSIZE=100000
-
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "zsh" && -z ${BASH_EXECUTION_STRING} && -x "/bin/zsh" ]]; then
   shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
   exec zsh $LOGIN_OPTION
 fi
+
+test -s ~/.alias && . ~/.alias || true
+HISTSIZE=100000
