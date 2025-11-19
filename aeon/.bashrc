@@ -23,3 +23,5 @@ fi
 
 test -s ~/.alias && . ~/.alias || true
 HISTSIZE=100000
+
+export PATH=$PATH:/home/eturkes/.spicetify
