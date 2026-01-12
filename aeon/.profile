@@ -16,11 +16,14 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-test -s ~/.alias && . ~/.alias || true
+test -z "$PROFILEREAD" && . /etc/profile || true
 
-if [[ $(ps --no-header --pid=$PPID --format=comm) != "zsh" && -z ${BASH_EXECUTION_STRING} && -x "/bin/zsh" ]]; then
-  shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
-  exec zsh $LOGIN_OPTION
-fi
+export EDITOR=/usr/bin/nvim
 
-HISTSIZE=100000
+source /home/eturkes/Documents/app/openvino_genai/setupvars.sh
+
+export NVM_DIR="$HOME/.config/nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+export PATH=$PATH:/home/eturkes/.spicetify
