@@ -16,7 +16,6 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-# From $HOME/.profile
 test -z "$PROFILEREAD" && . /etc/profile || true
 export EDITOR=/usr/bin/nvim
 
