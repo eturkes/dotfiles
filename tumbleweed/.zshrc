@@ -147,3 +147,13 @@ unset key
 # }}} End configuration added by Zim install
 
 PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
+
+cwd_state_file="/tmp/zsh_cwd_${USER}"
+save_cwd() {
+    pwd >| "$cwd_state_file"
+}
+add-zsh-hook chpwd save_cwd
+if [[ -f "$cwd_state_file" ]]; then
+    cd "$(< $cwd_state_file)"
+fi
+save_cwd
