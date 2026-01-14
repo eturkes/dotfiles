@@ -157,3 +157,5 @@ if [[ -f "$cwd_state_file" ]]; then
     cd "$(< $cwd_state_file)"
 fi
 save_cwd
+
+export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim

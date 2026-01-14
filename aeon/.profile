@@ -18,7 +18,7 @@
 
 test -z "$PROFILEREAD" && . /etc/profile || true
 
-export EDITOR=/usr/bin/nvim
+export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
 
 source /home/eturkes/Documents/app/openvino_genai/setupvars.sh
 
@@ -27,3 +27,6 @@ export NVM_DIR="$HOME/.config/nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 export PATH=$PATH:/home/eturkes/.spicetify
+
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_ENV_HINTS=1
