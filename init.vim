@@ -66,11 +66,6 @@ filetype indent plugin on
 " Enable syntax highlighting
 syntax enable
 
-" Uncomment if you want to install not-installed plugins on startup.
-"if dein#check_install()
-" call dein#install()
-"endif
-
 " vim-airline settings
 let g:airline_theme='owo'
 
