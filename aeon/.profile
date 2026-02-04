@@ -18,8 +18,6 @@
 
 test -z "$PROFILEREAD" && . /etc/profile || true
 
-export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
-
 source /home/eturkes/Documents/app/openvino_genai/setupvars.sh
 
 export PATH=$PATH:/home/eturkes/.spicetify
