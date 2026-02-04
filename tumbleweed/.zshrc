@@ -159,3 +159,5 @@ fi
 save_cwd
 
 export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
+
+export PATH="/home/linuxbrew/.linuxbrew/opt/rustup/bin:$PATH"
