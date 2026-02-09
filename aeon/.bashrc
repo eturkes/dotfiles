@@ -18,11 +18,9 @@
 
 test -s ~/.alias && . ~/.alias || true
 
-[[ $- == *i* ]] && eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-
 if [[ $(ps --no-header --pid=$PPID --format=comm) != "zsh" && -z ${BASH_EXECUTION_STRING} && -x "/home/linuxbrew/.linuxbrew/bin/zsh" ]]; then
   shopt -q login_shell && LOGIN_OPTION='--login' || LOGIN_OPTION=''
-  exec zsh $LOGIN_OPTION
+  exec /home/linuxbrew/.linuxbrew/bin/zsh $LOGIN_OPTION
 fi
 
 HISTSIZE=100000

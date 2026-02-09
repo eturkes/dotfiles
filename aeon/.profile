@@ -19,9 +19,3 @@
 test -z "$PROFILEREAD" && . /etc/profile || true
 
 source /home/eturkes/Documents/app/openvino_genai/setupvars.sh
-
-export PATH=$PATH:/home/eturkes/.spicetify
-
-export HOMEBREW_NO_INSTALL_CLEANUP=1
-export HOMEBREW_NO_ENV_HINTS=1
-export HOMEBREW_NO_ANALYTICS=1
