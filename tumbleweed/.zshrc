@@ -18,6 +18,7 @@
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 export PATH="/home/linuxbrew/.linuxbrew/opt/rustup/bin:$PATH"
+export PATH=/home/linuxbrew/.linuxbrew/share/google-cloud-sdk/bin:"$PATH"
 export PATH=$PATH:/home/eturkes/.spicetify
 
 export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
