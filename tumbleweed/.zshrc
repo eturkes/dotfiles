@@ -22,7 +22,6 @@ export PATH=/home/linuxbrew/.linuxbrew/share/google-cloud-sdk/bin:"$PATH"
 export PATH=$PATH:/home/eturkes/.spicetify
 
 export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
-export CLAUDE_CODE_MAX_OUTPUT_TOKENS=64000
 export HOMEBREW_NO_INSTALL_CLEANUP=1
 export HOMEBREW_NO_ENV_HINTS=1
 export HOMEBREW_NO_ANALYTICS=1
