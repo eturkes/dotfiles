@@ -34,7 +34,7 @@ colorscheme peachpuff
 set notermguicolors
 set nohlsearch
 
-hi Constant   cterm=None ctermfg=Green
+"hi Constant   cterm=None ctermfg=Green
 hi Identifier cterm=None ctermfg=White
 hi Function   cterm=None ctermfg=White
 "hi Statement  cterm=None ctermfg=White
