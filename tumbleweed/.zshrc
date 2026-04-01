@@ -158,6 +158,7 @@ unset key
 # }}} End configuration added by Zim install
 
 COLOR_NORMAL=#212121
+USER_LEVEL=#008EC4
 PS1='%F{${USER_LEVEL}}[%F{${COLOR_NORMAL}}%D{%T}%F{${USER_LEVEL}}]─$(_prompt_magicmace_status)[%F{${COLOR_NORMAL}}$(prompt-pwd)%F{${USER_LEVEL}}]${(e)git_info[prompt]}─>%f '
 
 cwd_state_file="/tmp/zsh-cwd-${USER}"
