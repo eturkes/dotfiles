@@ -49,14 +49,14 @@ set titleold="Terminal"
 set titlestring=%t
 
 " Yank to clipboard
-set clipboard=unnamedplus
+"set clipboard=unnamedplus
 
 " Remember last cursor position 
 autocmd BufReadPost * if @% !~# '\.git[\/\\]COMMIT_EDITMSG$' && line("'\"") > 1 &&
     \ line("'\"") <= line("$") | exe "normal! g`\"" | endif
 
-" Enable mouse support
-set mouse=a
+" Disable mouse support
+set mouse=
 
 " Attempt to determine the type of a file based on its name and possibly its
 " contents. Use this to allow intelligent auto-indenting for each filetype,
