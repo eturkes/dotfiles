@@ -18,4 +18,4 @@
 
 test -z "$PROFILEREAD" && . /etc/profile || true
 
-source /home/eturkes/Documents/app/openvino_genai/setupvars.sh
+source /home/eturkes/.local/app/openvino_genai/setupvars.sh
