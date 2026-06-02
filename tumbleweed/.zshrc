@@ -17,15 +17,12 @@
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
-export PATH="/home/linuxbrew/.linuxbrew/opt/rustup/bin:$PATH"
-export PATH="/home/linuxbrew/.linuxbrew/opt/dpkg/bin:$PATH"
-export PATH=/home/linuxbrew/.linuxbrew/share/google-cloud-sdk/bin:"$PATH"
+export HOMEBREW_NO_INSTALL_CLEANUP=1
+export HOMEBREW_NO_ENV_HINTS=1
+
 export PATH=$PATH:/home/eturkes/.spicetify
 
 export EDITOR=/home/linuxbrew/.linuxbrew/bin/nvim
-export HOMEBREW_NO_INSTALL_CLEANUP=1
-export HOMEBREW_NO_ENV_HINTS=1
-export HOMEBREW_NO_ANALYTICS=1
 
 # Start configuration added by Zim install {{{
 #
