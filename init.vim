@@ -77,3 +77,9 @@ hi SignColumn ctermbg=None
 " Readable highlighting
 " Must be added at the end to work correctly
 hi Visual cterm=reverse ctermbg=None
+
+" Set spellchecking for certain file types
+augroup spellcheck
+  autocmd!
+  autocmd FileType markdown,text setlocal spell spelllang=en_us
+augroup END
