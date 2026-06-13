@@ -169,3 +169,5 @@ if [[ -f "$cwd_state_file" ]]; then
     cd "$(< $cwd_state_file)"
 fi
 save_cwd
+
+alias diff='diff --color'
