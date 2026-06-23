@@ -171,3 +171,5 @@ fi
 save_cwd
 
 alias diff='diff --color'
+
+eval "$(direnv hook zsh)"
