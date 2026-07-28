@@ -16,5 +16,23 @@
 #
 #    Emir Turkes can be contacted at emir.turkes@eturkes.com
 
-# Keep the login environment identical when Zsh is selected explicitly.
-[ -r "$HOME/.profile" ] && . "$HOME/.profile"
+# Shared login environment for Bash, Zsh, and the desktop session.
+export EDITOR=/usr/bin/nvim
+
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export SDL_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+case ":${PATH:-}:" in
+    *":$HOME/.local/bin:"*) ;;
+    *) PATH="$HOME/.local/bin${PATH:+:$PATH}" ;;
+esac
+
+case ":${PATH:-}:" in
+    *":$HOME/.spicetify:"*) ;;
+    *) PATH="${PATH:+$PATH:}$HOME/.spicetify" ;;
+esac
+export PATH
+
+mkdir -p -- /tmp/browser-os-home-cache
