@@ -22,3 +22,13 @@
 
 # Keep interactive sessions predictable: no aliases or prompt framework.
 PS1='\u@\h:\w\$ '
+
+# Show the active zmx session in the prompt.
+if [[ -n $ZMX_SESSION ]]; then
+  export PS1="[$ZMX_SESSION] ${PS1}"
+fi
+
+# Enable zmx command and session completion.
+if command -v zmx &> /dev/null; then
+  eval "$(zmx completions bash)"
+fi

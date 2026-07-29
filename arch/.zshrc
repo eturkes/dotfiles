@@ -23,3 +23,16 @@ _zsh_autosuggest_disable
 
 # Disable command autocorrection enabled by the shared CachyOS config.
 unsetopt CORRECT CORRECT_ALL
+
+# Show the active zmx session in the Powerlevel10k prompt.
+function prompt_my_zmx_session() {
+  if [[ -n $ZMX_SESSION ]]; then
+    p10k segment -b '%k' -f '%f' -t "[$ZMX_SESSION]"
+  fi
+}
+POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS+=my_zmx_session
+
+# Enable zmx command and session completion.
+if command -v zmx &> /dev/null; then
+  eval "$(zmx completions zsh)"
+fi
