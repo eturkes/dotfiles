@@ -36,3 +36,8 @@ esac
 export PATH
 
 mkdir -p -- /tmp/browser-os-home-cache
+
+# Route file contents to Claude Code's Read tool. Sourced here so the head/tail
+# guards land in the login shell Claude Code snapshots for every Bash call; the
+# functions gate themselves on CLAUDECODE, so a human shell is unaffected.
+[ -r "$HOME/.claude/read-guard.sh" ] && . "$HOME/.claude/read-guard.sh"
