@@ -33,6 +33,19 @@ case ":${PATH:-}:" in
     *":$HOME/.spicetify:"*) ;;
     *) PATH="${PATH:+$PATH:}$HOME/.spicetify" ;;
 esac
+
+# pnpm's global shims, where `pnpm add -g` places them while PNPM_HOME stays unset; pnpm refuses a
+# global install outright when this directory is off PATH.
+case ":${PATH:-}:" in
+    *":$HOME/.local/share/pnpm/bin:"*) ;;
+    *) PATH="${PATH:+$PATH:}$HOME/.local/share/pnpm/bin" ;;
+esac
+
+# MoonBit's user-global toolchain, installed and self-updated under ~/.moon.
+case ":${PATH:-}:" in
+    *":$HOME/.moon/bin:"*) ;;
+    *) PATH="${PATH:+$PATH:}$HOME/.moon/bin" ;;
+esac
 export PATH
 
 mkdir -p -- /tmp/browser-os-home-cache
