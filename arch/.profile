@@ -29,6 +29,12 @@ case ":${PATH:-}:" in
     *) PATH="$HOME/.local/bin${PATH:+:$PATH}" ;;
 esac
 
+# Codexify's user-local CLI, shared by Bash, Zsh, and desktop sessions.
+case ":${PATH:-}:" in
+    *":$HOME/.codexify/bin:"*) ;;
+    *) PATH="$HOME/.codexify/bin${PATH:+:$PATH}" ;;
+esac
+
 case ":${PATH:-}:" in
     *":$HOME/.spicetify:"*) ;;
     *) PATH="${PATH:+$PATH:}$HOME/.spicetify" ;;
